@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FlexBox - Aula 1</title>
+    <style>
+        body {
+            height: 1200px;
+        }
+        #container {
+            display: flex;
+            background: rgba(156, 156, 156, 0.452);
+            border: 1px solid black;
+            padding: 10px;
+            max-width: 300px;
+            height: 300px;
+            /* alinhamento vertical */
+            justify-content: space-around;
+            /* alinhamento horizontal */
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        #f1, #f2, #f3, #f4, #f5, #f6 {
+            background: #3583e9;
+            border: 1px solid black;
+            height: 80px;
+            width: 80px;
+            text-align: center;
+        }
+        .box {
+            background: #3583e9;
+            border: 1px solid black;
+            height: 80px;
+            flex-basis: 80px;
+            text-align: center;
+        }
+        #contain {
+            display: flex;
+            background: rgba(156, 156, 156, 0.452);
+            border: 1px solid black;
+            padding: 10px;
+            max-width: 300px;
+            height: 300px;
+            /* alinhamento vertical */
+            justify-content: space-around;
+            /* alinhamento horizontal */
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        } 
+        #b1 {
+            
+            order: 2;
+        }
+        #b2 {
+           
+            order: 1;
+        }
+        #b3 {
+            
+            order: 0;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="container">
+        <div id="f1">
+            1
+        </div>
+        <div id="f2">
+            2
+        </div>
+        <div id="f3">
+            3
+        </div>
+        <div id="f4">
+            4
+        </div>
+        <div id="f5">
+            5
+        </div>
+        <div id="f6">
+            6
+        </div>
+    </div>
+    <hr>
+    <div id="contain">
+        <div class="box" id="b1">
+            1
+        </div>
+        <div class="box" id="b2">
+            2
+        </div>
+        <div class="box" id="b3">
+            3
+        </div>
+    </div>
 </body>
 </html>
