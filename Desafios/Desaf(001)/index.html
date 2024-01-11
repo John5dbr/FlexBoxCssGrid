@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-flow: column wrap;
+        }
+        header {
+            display: flex;
+            flex-flow: row;
+            background: rgb(145, 143, 143);
+            height: 10vh;
+            margin: 5px; 
+        }
+        #p1 {
+            padding: 26px;
+            flex-grow: 0.2;
+            background: rgb(190, 189, 189);
+            flex-basis: 70px;
+            text-align: center;
+            justify-content: flex-start;
+        }
+        img {
+            display: none;
+            width: 80px;
+        }
+        nav {
+            margin: 5px;
+            justify-content: center;
+            display: flex;
+            background: rgb(145, 143, 143);
+            flex-flow: row wrap;
+        }
+        nav > article {
+            padding: 30px;
+        }
+        main {
+            margin: 5px;
+            height: 41vh;
+            background: rgb(145, 143, 143);
+        }
+        aside {
+            margin: 5px;
+            height: 15vh;
+            background: rgb(145, 143, 143);
+        }
+        footer {
+            margin: 5px;
+            height: 15vh;
+            background: rgb(145, 143, 143);
+        }
+        @media (max-width: 650px) {
+            nav {
+                display: none;
+            }
+            img {
+                display: inline;
+                justify-content: flex-end;
+            }
+            main {
+                height: 52vh;
+            }
+        }
+    </style>    
 </head>
 <body>
-    
+    <div class="container">
+            <header>
+                <article id="p1">
+                    Logo
+                </article>
+                <img id="p2" src="Menu_icon_icon-icons.com_71858.png" alt="menu">
+            </header>
+            <nav>
+                <article>Home</article>
+                <article>About</article>
+                <article>Product</article>
+                <article>Contact</article>
+            </nav>
+            <main>
+                Main
+            </main>
+            <aside>
+                Aside
+            </aside>
+            <footer>
+                Footer
+            </footer>
+    </div>
 </body>
 </html>
