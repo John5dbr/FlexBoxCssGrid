@@ -12,14 +12,16 @@
             display: flex;
             background: rgba(156, 156, 156, 0.452);
             border: 1px solid black;
-            padding: 5px;
+            padding: 15px;
             max-width: 300px;
             height: 300px;
-            /* alinhamento vertical */
-            justify-content: space-around;
             /* alinhamento horizontal */
+            justify-content: space-around;
+            /* alinhamento vertical */
             align-items: center;
+            /* Quebra de linha */
             flex-wrap: wrap;
+            /* Direção dos elementros filhos */
             flex-direction: row;
         }
         #f1, #f2, #f3, #f4, #f5, #f6 {
@@ -32,33 +34,45 @@
         .box {
             background: #3583e9;
             border: 1px solid black;
-            height: 80px;
-            flex-basis: 80px;
+            height: 100px;
+            width: 100px;
+            /* Shorthand para Flex-Grow
+            Flex-Shrink Flex-basis */
+            flex: 0 2 150px;
             text-align: center;
+            /* Diminuição dos elementos filhos */
+            flex-shrink: 0;
+            /* Aumento dos elementos filhos */
+            flex-grow: 0;
+            /* Tamanho base dos elementos filhos */
+            flex-basis: 0;
         }
         #contain {
             display: flex;
             background: rgba(156, 156, 156, 0.452);
             border: 1px solid black;
-            padding: 10px;
-            max-width: 350px;
+            max-width: 250px;
             height: 300px;
             /* alinhamento vertical */
-            justify-content: space-around;
+            justify-content: space-between;
             /* alinhamento horizontal */
             align-items: center;
-            flex-wrap: wrap;
-            flex-direction: row;
+            flex-direction: column;
         } 
         #b1 {
-            flex-grow: 2;
+            /* Ordenar os elementos filhos dentro do elemento pai */
+            order: 1;
+            flex: 0 2 200px;
         }
         #b2 {
-            flex-grow: 2;
-            flex-shrink: 3;
+            /* Mudar posição dos elementos filhos */
+            align-self: flex-end;
+            flex: 0 4 200px;
+            order: 2;
         }
         #b3 {
-            flex-grow: 0;
+            order: 0;
+            flex: 0 2 200px;
         }
     </style>
 </head>
