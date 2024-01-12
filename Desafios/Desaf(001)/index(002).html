@@ -24,9 +24,12 @@
             text-align: center;
             justify-content: flex-start;
         }
+        #tudo {
+            background: white;
+            z-index: 5;
+        }
         img {
             display: none;
-            width: 80px;
         }
         nav {
             margin: 5px;
@@ -56,42 +59,69 @@
         @media (max-width: 650px) {
             nav {
                 display: none;
+                z-index: 1;
             }
-            img {
+            article {
+                z-index: 1;
+            }
+            header {
+                z-index: 1;
+            }
+            aside {
+                z-index: 1;
+            }
+            footer {
+                z-index: 1;
+            }
+            #p2 {
                 height: 10vh;
                 display: inline;
                 position: absolute;
                 right: 20px;
             }
+            #container {
+                z-index: 1;
+            }
             main {
                 height: 52vh;
+                z-index: 1;
+            }
+            #tudo {
+                background: rgb(0, 0, 0);
+                z-index: 1;
+            }
+            #wall {
+                z-index: 6;
             }
         }
     </style>    
 </head>
 <body>
-    <div class="container">
-            <header>
-                <article id="p1">
-                    Logo
-                </article>
-                <a href=""><img id="p2" src="Menu_icon_icon-icons.com_71858.png" alt="menu"></a>
-            </header>
-            <nav>
-                <article>Home</article>
-                <article>About</article>
-                <article>Product</article>
-                <article>Contact</article>
-            </nav>
-            <main>
-                Main
-            </main>
-            <aside>
-                Aside
-            </aside>
-            <footer>
-                Footer
-            </footer>
+    <div id="tudo">
+        <img id="wall" src="Sem título.png" alt="fundo">
+        <div class="container">
+                <header>
+                    <article id="p1">
+                        Logo
+                    </article>
+                    <a href=""><img id="p2" src="Menu_icon_icon-icons.com_71858.png" alt="menu"></a>
+                </header>
+                <nav>
+                    <article>Home</article>
+                    <article>About</article>
+                    <article>Product</article>
+                    <article>Contact</article>
+                </nav>
+                <main>
+                    Main
+                </main>
+                <aside>
+                    Aside
+                </aside>
+                <footer>
+                    Footer
+                </footer>
+        </div>
     </div>
 </body>
 </html>
