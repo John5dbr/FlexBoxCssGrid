@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout 4</title>
+    <title>Layout 5</title>
     <style> 
         #container1 {
             display: flex;
@@ -14,6 +14,7 @@
             flex-flow: row wrap;
         }
         header {
+            justify-content: space-between;
             display: flex;
             flex-direction: row;
             margin: 5px;
@@ -21,7 +22,8 @@
             height: 13vh;
         }
         header > article {
-            flex: 0.3 0;
+            align-items: center;
+            flex: 0.7 0;
             max-width: 350px;
             text-align: center;
             background: rgb(168, 168, 168);
@@ -32,25 +34,24 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
-            height: 13vh;
-            align-items: center;
+            align-self: center;
         }
         nav > article {
-            padding: 15px;
+            padding: 20px;
         }
         nav > article:hover {
-            background: rgb(126, 126, 126);
+            background: rgba(126, 126, 126, 0.5);
         }
         main {
             flex: 2 0;
-            height: 53vh;
+            height: 67vh;
             margin: 5px;
             background: rgb(85, 85, 85);
         }
         aside {
-            max-width: 400px;
+            max-width: 250px;
             flex: 1 0;
-            height: 53vh;
+            height: 67vh;
             margin: 5px;
             background: rgb(85, 85, 85);
         }
@@ -67,20 +68,20 @@
             <article>
                 Logo
             </article>
+            <nav>
+                <article>Home</article>
+                <article>About</article>
+                <article>Product</article>
+                <article style="margin-right: 10px;">Contact</article>
+            </nav>
         </header>
-        <nav>
-            <article>Home</article>
-            <article>About</article>
-            <article>Product</article>
-            <article>Contact</article>
-        </nav>
         <div id="container2">
-            <main>
-                Main
-            </main>
             <aside>
                 Aside
             </aside>
+            <main>
+                Main
+            </main>
         </div>
         <footer>
             Footer
