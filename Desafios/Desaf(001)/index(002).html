@@ -28,18 +28,37 @@
             background: white;
             z-index: 5;
         }
-        img {
-            display: none;
+        a {
+        
         }
         nav {
+            z-index: 5;
+            position: absolute;
+            width: 98vw;
+            height: 98vh;
             margin: 5px;
             justify-content: center;
             display: flex;
-            background: rgb(145, 143, 143);
-            flex-flow: row wrap;
+            background: rgba(255, 255, 255, 0.685);
+            flex-flow: column wrap;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        nav > article:hover {
+            background: rgba(77, 77, 77, 0.76);
         }
         nav > article {
-            padding: 30px;
+            text-align: center;
+            font-weight: bold;
+            width: 80px;
+            padding: 35px;
+        }
+        #p2 {
+            height: 10vh;
+            display: inline;
+            position: absolute;
+            right: 6px;
+            top: 0px;
         }
         main {
             margin: 5px;
@@ -57,9 +76,11 @@
             background: rgb(145, 143, 143);
         }
         @media (max-width: 650px) {
-            nav {
-                display: none;
+            img {
                 z-index: 1;
+            }
+            nav {
+                z-index: 5;
             }
             article {
                 z-index: 1;
@@ -73,12 +94,6 @@
             footer {
                 z-index: 1;
             }
-            #p2 {
-                height: 10vh;
-                display: inline;
-                position: absolute;
-                right: 20px;
-            }
             #container {
                 z-index: 1;
             }
@@ -86,27 +101,24 @@
                 height: 52vh;
                 z-index: 1;
             }
-            #tudo {
-                background: rgb(0, 0, 0);
-                z-index: 1;
-            }
-            #wall {
-                z-index: 6;
+        }
+        @media (min-width: 1300px) {
+            nav {
+                width: 99vw;
             }
         }
     </style>    
 </head>
 <body>
     <div id="tudo">
-        <img id="wall" src="Sem título.png" alt="fundo">
         <div class="container">
                 <header>
                     <article id="p1">
                         Logo
                     </article>
-                    <a href=""><img id="p2" src="Menu_icon_icon-icons.com_71858.png" alt="menu"></a>
                 </header>
                 <nav>
+                    <a href="index.html"><img id="p2" src="Menu_icon_icon-icons.com_71858.png" alt="menu"></a>
                     <article>Home</article>
                     <article>About</article>
                     <article>Product</article>
