@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Layout 3</title>
+    <style>
+        #container1 {
+            display: flex;
+            flex-flow: column wrap;
+        }
+        #p1 {
+            background: rgb(170, 170, 170);
+            text-align: center;
+            flex: 0.3 0 ;
+            max-width: 300px;
+        }
+        header {
+            display: flex;
+            height: 13vh;
+            background: rgb(110, 110, 110);
+            margin: 5px;
+        }
+        #container2 {
+            justify-content: space-between;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        main, aside, nav {
+            margin: 5px;
+            height: 65vh;
+            background: rgb(110, 110, 110);
+        }
+        main {
+            flex: 3 0;
+        }
+        aside {
+            flex: 1 0;
+        }
+        nav > article:hover {
+            background: rgb(87, 87, 87);
+        }
+        nav > article {
+            text-align: center;
+            width: 14vw;
+            padding: 15px;
+        }
+        nav {
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex: 1 0; 
+        }
+        footer {
+            background: rgb(110, 110, 110);
+            display: flex;
+            height: 15vh;
+            background: rgb(110, 110, 110);
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="container1">
+        <header>
+            <article id="p1">
+                Logo
+            </article>
+            <article id="p2">
+
+            </article>
+        </header>
+        <div id="container2">
+            <nav>
+                <article>Home</article>
+                <article>About</article>
+                <article>Product</article>
+                <article>Contact</article>
+            </nav>
+            <main>
+                Main
+            </main>
+            <aside>
+                Aside
+            </aside>
+        </div>
+        <footer>
+            Footer
+        </footer>
+    </div>
 </body>
 </html>
