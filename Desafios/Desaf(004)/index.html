@@ -5,87 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout 5</title>
     <style> 
-        #container1 {
-            display: flex;
-            flex-flow: column wrap;
+        * {
+            margin: 0px;
+            padding: 0px;
         }
-        #container2 {
+        body {
             display: flex;
             flex-flow: row wrap;
+        }
+        header, nav, main, aside, footer {
+            display: flex;
+            flex-flow: row wrap;
+            background: rgb(88, 88, 88);
+            margin: 5px;
         }
         header {
-            justify-content: space-between;
-            display: flex;
-            flex-direction: row;
-            margin: 5px;
-            background: rgb(85, 85, 85);
-            height: 13vh;
-        }
-        header > article {
-            align-items: center;
-            flex: 0.7 0;
-            max-width: 350px;
-            text-align: center;
-            background: rgb(168, 168, 168);
+            flex: 1 1 100vw;
+            height: 100px;
         }
         nav {
-            margin: 5px;
-            background: rgb(85, 85, 85);
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-self: center;
+            flex: 1 1 200px;
+            height: 70vh;
         }
-        nav > article {
-            padding: 20px;
-        }
-        nav > article:hover {
-            background: rgba(126, 126, 126, 0.5);
+        section {
+            background: linear-gradient(120deg, black, darkgray);
+            overflow: auto;
+            height: 2000px;
         }
         main {
-            flex: 2 0;
-            height: 67vh;
-            margin: 5px;
-            background: rgb(85, 85, 85);
+            background: linear-gradient(120deg, black, darkgray);
+            overflow: auto;
+            flex: 10 1 500px;
+            height: 70vh;
         }
         aside {
-            max-width: 250px;
-            flex: 1 0;
-            height: 67vh;
-            margin: 5px;
-            background: rgb(85, 85, 85);
+            flex: 1 1 200px;
+            height: 70vh;
         }
         footer {
-            margin: 5px;
-            background: rgb(85, 85, 85);
-            height: 13vh;
+            flex: 1 1 100vw;
+            height: 100px;
+        }
+        @media (max-width: 930px) {
+            aside {
+                height: 100px;
+            }
+            main {
+                height: calc(70vh - 107px);
+            }
+            nav {
+                height: calc(70vh - 107px);
+            }
+        }
+        @media (max-width: 720px) {
+            aside {
+                height: 100px;
+            }
+            nav {
+                height: 100px;
+            }
+            main {
+                height: calc(70vh - 214px);
+            }
         }
     </style>
 </head>
 <body>
-    <div id="container1">
-        <header>
-            <article>
-                Logo
-            </article>
-            <nav>
-                <article>Home</article>
-                <article>About</article>
-                <article>Product</article>
-                <article style="margin-right: 10px;">Contact</article>
-            </nav>
-        </header>
-        <div id="container2">
-            <aside>
-                Aside
-            </aside>
-            <main>
-                Main
-            </main>
-        </div>
-        <footer>
-            Footer
-        </footer>
-    </div>
+    <header>
+        header
+    </header>
+    <nav>
+        nav
+    </nav>
+    <main>
+        <section>main</section>
+    </main>
+    <aside>
+        aside
+    </aside>
+    <footer>
+        footer
+    </footer>
 </body>
 </html>

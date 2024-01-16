@@ -22,42 +22,50 @@
             margin: 5px;
         }
         #container2 {
-            justify-content: space-between;
             display: flex;
             flex-flow: row wrap;
         }
         main, aside, nav {
             margin: 5px;
-            height: 65vh;
             background: rgb(110, 110, 110);
         }
         main {
-            flex: 3 0;
+            flex: 3 0 400px;
+            height: 45vh;
+            overflow: auto;
         }
         aside {
-            flex: 1 0;
-        }
-        nav > article:hover {
-            background: rgb(87, 87, 87);
-        }
-        nav > article {
-            text-align: center;
-            width: 14vw;
-            padding: 15px;
+            flex: 1 0 200px;
         }
         nav {
+            height: 15vh;
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
             display: flex;
-            flex: 1 0; 
+            flex: 1 0 200px; 
         }
         footer {
             background: rgb(110, 110, 110);
             display: flex;
             height: 15vh;
-            background: rgb(110, 110, 110);
             margin: 5px;
+        }
+        @media (max-width: 850px) {
+            aside {
+                height: 15vh;
+            }
+            nav {
+
+            }
+        }
+        @media (max-width: 636px) {
+            nav {    
+                height: 8vh;
+            }
+            main {
+                height: 40vh;
+            }
         }
     </style>
 </head>
@@ -67,16 +75,9 @@
             <article id="p1">
                 Logo
             </article>
-            <article id="p2">
-
-            </article>
         </header>
-        <div id="container2">
             <nav>
-                <article>Home</article>
-                <article>About</article>
-                <article>Product</article>
-                <article>Contact</article>
+                Menu
             </nav>
             <main>
                 Main
@@ -84,7 +85,6 @@
             <aside>
                 Aside
             </aside>
-        </div>
         <footer>
             Footer
         </footer>
