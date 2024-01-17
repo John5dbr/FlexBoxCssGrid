@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout-6</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            display: flex;
+            flex-flow: column wrap;
+        }
+        header, nav, main, aside {
+            display: flex;
+            background: darkgray;
+            margin: 5px;
+        } 
+        header {
+            height: 72px;
+            flex-flow: row wrap;
+        }
+        header > article {
+            flex: 1 0 100px;
+            text-align: right;
+        }
+        nav {
+            flex-flow: row wrap;
+            flex: 1 0 100px;
+            justify-content: center;
+            align-items: center;
+        }
+        nav > article {
+            margin: 15px;
+        }
+        nav > article:hover {
+            background: rgb(95, 95, 95);
+        }
+        main {
+           
+            height: 55vh;
+        }
+        aside {
+          
+            height: 31vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <article>Home</article>
+            <article>About</article>
+            <article>Contact</article>
+        </nav>
+        <article>Logo</article>
+    </header>
+    <main>
+        Main
+    </main>
+    <aside>
+        Aside
+    </aside>
+</body>
+</html>

@@ -9,6 +9,34 @@
             margin: 0px;
             padding: 0px;
         }
+        /* Estilizando o scroll */
+        /*--------------------------------*/
+        /* Para navegador firefox */
+        * {
+            /* define a largura */
+            scrollbar-width: 12px;
+            /* o primeiro valor define a cor do botão deslizante, ja a segunda define a cor de fundo*/
+            scrollbar-color: rgb(77, 77, 77) rgb(48, 48, 48);
+        }
+        /*--------------------------------*/
+        /* Para Chrome, Edge e Safari */
+        *::-webkit-scrollbar {   
+            /* define largura */
+            width: 10px;
+        }
+        *::-webkit-scrollbar-track {
+            /* define cor de fundo */
+            background: rgb(99, 99, 99);
+        }
+        *::-webkit-scrollbar-thumb {
+            /* define cor do botão deslizante*/
+            background: rgb(44, 44, 44);
+            /* define arredondamento do botão deslizante */
+            border-radius: 5px;
+            /* define borda do botão deslizante*/
+            border: 0.5px solid black;
+        }
+        /*--------------------------------*/
         body {
             display: flex;
             flex-flow: row wrap;
@@ -31,9 +59,14 @@
             background: linear-gradient(120deg, black, darkgray);
             overflow: auto;
             height: 2000px;
+            width: 100vw;
+        }
+        h1, p {
+            color: white;
+            padding: 5px;
+            text-align: justify;
         }
         main {
-            background: linear-gradient(120deg, black, darkgray);
             overflow: auto;
             flex: 10 1 500px;
             height: 70vh;
@@ -78,7 +111,9 @@
         nav
     </nav>
     <main>
-        <section>main</section>
+        <section>
+            <h1>ai zé da manga</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum perferendis minima aliquam eos accusantium et beatae nesciunt, consequuntur doloremque quasi nam? Vero minus eveniet veniam ipsa nisi at id, aut molestiae esse non ab, harum, officia sit quaerat dolor! Possimus repudiandae pariatur suscipit? Ab earum repellendus officia dolorem asperiores repellat libero, alias molestiae, dignissimos accusantium assumenda? Tenetur natus sequi nihil vitae libero maiores inventore atque deleniti, autem error voluptatibus praesentium fugit numquam culpa in beatae sint necessitatibus? A hic nihil alias assumenda, omnis consequatur magnam quaerat vitae perferendis inventore voluptatibus voluptatem, reiciendis quas provident exercitationem libero! Exercitationem, distinctio dolore dignissimos corporis, necessitatibus minima quae eum magnam quia, molestias quasi iste. Vitae, quos doloremque. Quod, itaque, aliquid, omnis dicta sapiente nisi natus placeat tempora suscipit officiis dolore dolorem? Perferendis laudantium omnis distinctio eius, voluptate rem odit laboriosam, dolorem in laborum nisi error provident, itaque facere aut? Non aperiam, quisquam aliquid maxime porro distinctio excepturi harum quas ad quidem vel maiores tenetur error? Corrupti perspiciatis, numquam labore impedit modi perferendis tempore assumenda, aspernatur expedita cum, rem id. Quae, iste totam. Adipisci eos non eaque iste, tenetur dicta quam laboriosam deleniti. Hic, dolor optio ratione aliquid omnis repellendus fuga tenetur quasi esse. Tempore?</p></section>
     </main>
     <aside>
         aside
