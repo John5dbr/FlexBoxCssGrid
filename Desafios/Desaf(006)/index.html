@@ -9,6 +9,16 @@
             padding: 0px;
             margin: 0px;
         }
+        *::-webkit-scrollbar {
+            width: 10px;
+        }
+        *::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0);
+        }
+        *::-webkit-scrollbar-thumb {
+            background: rgba(110, 110, 110, 0.685);
+            border-radius: 5px;
+        }
         body {
             display: flex;
             flex-flow: row wrap;
@@ -20,19 +30,66 @@
         }
         header {
             width: 100vw;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
         }
         nav {
             width: 100vw;
+            height: 80px;
+            justify-content: center;
+            align-items: center;
         }
         main {
-            flex: 1 0 500px;
+            flex: 1 0 600px;
+            flex-flow: column;
+            height: 499px;
+            overflow: auto;
+            box-shadow: inset 1px 1px 10px rgba(107, 107, 107, 0.678);
+        }
+        h1, p {
+            padding: 10px;
         }
         aside {
             flex: 1 0 400px;
+            height: 499px;
+            flex-flow: row wrap;
         }
-
+        aside > picture {
+            flex: 3 0 calc(30vh - 19vh);
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+        aside > article {
+            flex: 5 0 19vh;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+        aside > section {
+            flex: 1 0 30vw;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+        aside > picture:hover, article:hover, section:hover {
+            background: rgb(107, 107, 107);
+        }
         footer {
             width: 100vw;
+            height: 80px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 1021px) {
+            aside {
+                height: 138px
+            }
+            main {
+                height: 350px;
+            }
         }
     </style>
 </head>
@@ -43,8 +100,13 @@
     <nav>
         Navigation Links
     </nav>
-    <main>
-        Main content
+    <main>        
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, nobis corporis eum placeat totam laudantium distinctio aspernatur molestias accusamus commodi et, odio reprehenderit cupiditate necessitatibus sint dicta ad quibusdam illo.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates iusto quisquam cumque. Quasi ipsum labore possimus blanditiis tempora autem eum soluta totam minima? Unde, hic. Tenetur consequatur quae aliquid cumque.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores fuga consequuntur accusantium labore? Repudiandae nulla minima numquam quisquam. Est minima sit molestias id at atque sapiente nostrum repellendus. Dolores libero provident maxime ea animi quidem quibusdam temporibus, nulla vitae! Deleniti.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam consequatur iusto sint minima hic possimus nisi reprehenderit placeat excepturi dolorum aut officia deleniti quas impedit quis recusandae harum molestiae, alias dicta accusamus officiis error corporis explicabo. Reiciendis rem quam laboriosam doloremque aliquid ex cum accusantium ab, unde, eveniet ullam exercitationem quae eius esse vero quisquam. Voluptatum, eaque alias fugit sit asperiores optio! Esse, libero! Praesentium sapiente et animi asperiores, odit est possimus sunt officiis accusantium aut dicta ducimus dolorum facere quae pariatur ea neque repellat, similique quibusdam exercitationem facilis ut recusandae? Nisi facere tempora exercitationem veniam nesciunt similique labore quis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, quam laborum repudiandae magnam dolorem quaerat eligendi et distinctio, exercitationem harum omnis corporis veritatis, fugiat voluptas. Tempora voluptatem, laudantium distinctio tenetur iure cupiditate eum iste accusamus asperiores odit vero perspiciatis ea. Optio, sequi. Illo, ratione tempora accusantium amet eveniet in molestiae.</p>
     </main>
     <aside>
         <picture>
