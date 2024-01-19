@@ -13,7 +13,7 @@
             display: flex;
             flex-flow: column wrap;
         }
-        header, nav, main, aside {
+        header, nav, main {
             display: flex;
             background: darkgray;
             margin: 5px;
@@ -39,12 +39,26 @@
             background: rgb(95, 95, 95);
         }
         main {
-           
-            height: 55vh;
+            height: 45vh;
         }
         aside {
-          
-            height: 31vh;
+            display: flex;
+            margin: 5px;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            margin: 0px 45vh;
+            height: 37vh;
+            background: white;
+        }
+        img {
+            height: 37vh;
+            box-shadow: inset 1px 1px 5px black;
+        }
+        picture {
+            
+        }
+        @media (max-width: 1125px) {
+
         }
     </style>
 </head>
@@ -61,7 +75,15 @@
         Main
     </main>
     <aside>
-        Aside
+        <picture>
+            <img id="img1" src="imagens/pexels-brett-sayles-3697352.jpg" alt="neve">
+        </picture>
+        <picture>
+            <img id="img2" src="imagens/pexels-rastislav-durica-6010396.jpg" alt="selva">
+        </picture>
+        <picture>
+            <img id="img3" src="imagens/pexels-eberhard-grossgasteiger-2437286.jpg" alt="noite">
+        </picture>
     </aside>
 </body>
 </html>
