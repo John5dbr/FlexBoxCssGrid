@@ -21,24 +21,24 @@
         header {
             display: flex;
             background: var(--cor1);
-            height: 72px;
+            height: 75px;
             flex-flow: row wrap;
             flex: 1 0 50px;
-
         }
         header > picture {
+            margin: 0px;
             justify-content: flex-end;
-            flex: 1 0 100px;
+            flex: 1.1 0 100px;
             align-items: center;
-            background: url('imagens/image-removebg-preview.png') no-repeat center;
-            background-size: cover;
+            background: url('imagens/image-removebg-preview.png') no-repeat center left;
+            background-size: 300px;
             width: 200px;
         }
         nav {
             display: flex;
             background: var(--cor1);
             flex-flow: row wrap;
-            flex: 0.6 0 100px;
+            flex: 1.7 0 100px;
             justify-content: center;
             align-items: center;
         }
@@ -54,7 +54,7 @@
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
-            height: 50vh;
+            height: 30vh;
         }
         #grande {
             flex: 1 0;
@@ -63,19 +63,20 @@
         }
         p {
             align-self: flex-end;
-            margin: 20px 44vh;
+            margin: 15px 0px;
             text-align: justify;
             font-family: 'Roboto'; 
         }
         aside {
+            align-self: center;
             display: flex;
             flex-flow: row wrap;
-            justify-content: space-evenly;
-            margin: 0px 35vh;
-            height: 37vh;
+            justify-content: space-between;
+            width: 60vw;
+            height: 56vh;
             background: rgb(255, 255, 255);
         }
-        picture {
+        aside > picture {
             box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.603);
         }
         #i1 {
@@ -96,25 +97,70 @@
             background: url("imagens/pexels-rastislav-durica-6010396.jpg") no-repeat center ;
             background-size: cover;
         }
-        @media (max-width: 1125px) {
-
+        @media (max-width: 700px) {
+            aside {
+                width: 80vw;
+            }
+            aside > picture {
+                margin: 5px 0px;
+            }
+            p {
+                margin: 15px 0px;
+            }
+            #i1 {
+                width: 25vw;
+                height: 25vw;
+            }
+            #i2 {
+                width: 25vw;
+                height: 25vw;
+            }
+            #i3 {
+                width: 25vw;
+                height: 25vw;
+            }
+        }
+        @media (max-width: 650px) {
+            nav {
+                justify-content: flex-start;
+                flex: 1.3 0;
+            }
+            nav > article {
+                padding: 10px;
+                text-align: center;
+            }
+            #o3 {
+                flex: 1 0;
+            }
+            #o2 {
+                flex: 1 0;
+            }
+            #o1 {
+                flex: 1 0 200px;
+            }
+            header {
+                flex: 0 0;
+            }
+            header > picture {
+                background-size: 250px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <article>Home</article>
-            <article>About</article>
-            <article>Contact</article>
+            <article id="o3">Home</article>
+            <article id="o2">About</article>
+            <article id="o1">Contact</article>
         </nav>
         <picture></picture>
     </header>
     <main>
         <picture id="grande">.</picture>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque blanditiis voluptatum, incidunt magni consequatur quasi saepe similique vel ab, alias itaque totam voluptatibus eum in a officia debitis mollitia tenetur sint quas non. Debitis dolorum iste voluptates consequatur cumque eaque molestiae beatae. Deleniti aut, ipsa incidunt a sunt unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. At nemo id, vel, aliquid qui asperiores veniam porro harum dolorem modi voluptatem. Dolores quia sit voluptatibus et error quasi.</p>
     </main>
     <aside>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque blanditiis voluptatum, incidunt magni consequatur quasi saepe similique vel ab, alias itaque totam voluptatibus eum in a officia debitis mollitia tenetur sint quas non. Debitis dolorum iste voluptates consequatur cumque eaque molestiae beatae. Deleniti aut, ipsa incidunt a sunt unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. At nemo id, vel, aliquid qui asperiores veniam porro harum dolorem modi voluptatem. Dolores quia sit voluptatibus et error quasi.</p>
         <picture id="i1"></picture>
         <picture id="i2"></picture>
         <picture id="i3"></picture>
