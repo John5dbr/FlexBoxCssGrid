@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout-7</title>
+    <link rel="shortcut icon" href="imagens/icon2.png" type="image/x-icon">
+    <title>Noticias-Eco</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sriracha&display=swap');
+        :root {
+            --cor1: #01746B;
+            --cor2: #105E5B;
+        } 
         * {
             padding: 0px;
             margin: 0px;
         }
         *::-webkit-scrollbar {
-            width: 10px;
+            width: 5px;
         }
         *::-webkit-scrollbar-track {
             background: rgba(0, 0, 0, 0);
@@ -20,107 +26,171 @@
             border-radius: 5px;
         }
         body {
+            background-color: #0a504d;
             display: flex;
             flex-flow: row wrap;
         }
-        header, nav, main, aside, picture, article, section, footer {
+        picture, footer {
             display: flex;
-            background-color: darkgray;
+            background-color: rgb(255, 255, 255);
             margin: 5px;
         }
         header {
+            background: var(--cor1) url('imagens/image-removebg-preview.png') no-repeat center;
+            background-size: 370px;
+            display: flex;
+            margin: 0px;
             width: 100vw;
-            height: 100px;
+            height: 80px;
             justify-content: center;
             align-items: center;
         }
         nav {
+            display: flex;
+            background-color: var(--cor1);
+            margin: 0px;
             width: 100vw;
-            height: 80px;
+            height: 50px;
             justify-content: center;
             align-items: center;
         }
+        .link {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-family: 'Roboto';
+        } 
+        .link:hover {
+            transition-duration: 0.3s;
+            background: #0f8581;
+            border-bottom: 5px solid #085753;
+        }
         main {
-            flex: 1 0 600px;
-            flex-flow: column;
-            height: 499px;
+            display: flex;
+            background-color: rgb(9, 82, 78);
+            padding: 0px;
+            margin: 5px;
+            flex: 1 0 60vw;
+            flex-flow: row wrap;
+            height: 450px;
             overflow: auto;
             box-shadow: inset 1px 1px 10px rgba(107, 107, 107, 0.678);
         }
-        h1, p {
+        main > section {
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            margin: 0px;
+            box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.425);
+            display: flex;
+            flex-flow: row wrap;
+            overflow: auto;
+        }
+        h1, h2, p {
             padding: 10px;
+            color: black;
+            text-decoration: none;
+            font-family: 'Roboto';
         }
         aside {
             flex: 1 0 400px;
-            height: 499px;
+            height: 450px;
             flex-flow: row wrap;
+            display: flex;
+            background-color: rgb(9, 82, 78); 
+            margin: 5px;
         }
-        aside > picture {
-            flex: 3 0 calc(30vh - 19vh);
+        #a1 {
+            background: url('imagens/pexels-capricious-wayfarer-\(saptarshi\)-974406.jpg') no-repeat center;
+            background-size: cover;
+            flex: 3 0 calc(30vh - 15vh);
             border: 1px solid black;
             justify-content: center;
             align-items: center;
+            margin: 5px;
         }
-        aside > article {
-            flex: 5 0 19vh;
+        #a2 {
+            background: url('imagens/pexels-rodolfo-clix-2954458.jpg') no-repeat center;
+            background-size: cover;
+            flex: 5 0 15vh;
             border: 1px solid black;
             justify-content: center;
             align-items: center;
+            margin: 5px;
         }
-        aside > section {
+        #a3 {
+            background: url('imagens/pexels-dom-gould-325807.jpg') no-repeat center;
+            background-size: cover;
             flex: 1 0 30vw;
             border: 1px solid black;
             justify-content: center;
             align-items: center;
+            margin: 5px;
         }
-        aside > picture:hover, article:hover, section:hover {
-            background: rgb(107, 107, 107);
+        aside > #a1:hover, #a2:hover, #a3:hover {
+            zoom: auto 1 10%;
         }
         footer {
             width: 100vw;
-            height: 80px;
+            height: 35px;
             justify-content: center;
             align-items: center;
         }
-
-        @media (max-width: 1021px) {
+        @media (max-width: 1050px) {
+            header {
+                height: 60px;
+            }
+            nav {
+                height: 60px;
+            }
             aside {
-                height: 138px
+                height: 110px
             }
             main {
-                height: 350px;
+                height: 312px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        Banner
-    </header>
+    <a href="/Desafios/Desaf(005)/index.html">
+        <header>
+        </header>
+    </a>
     <nav>
-        Navigation Links
+        <article><a class="link" href="">Clima/Temperatura</a></article>
+        <article><a class="link" href="">Noticia Internacionais</a></article>
+        <article><a class="link" href="">Política</a></article>
+        <article><a class="link" href="">Estados</a></article>
     </nav>
     <main>        
-        <h1>Lorem ipsum dolor sit amet.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, nobis corporis eum placeat totam laudantium distinctio aspernatur molestias accusamus commodi et, odio reprehenderit cupiditate necessitatibus sint dicta ad quibusdam illo.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates iusto quisquam cumque. Quasi ipsum labore possimus blanditiis tempora autem eum soluta totam minima? Unde, hic. Tenetur consequatur quae aliquid cumque.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores fuga consequuntur accusantium labore? Repudiandae nulla minima numquam quisquam. Est minima sit molestias id at atque sapiente nostrum repellendus. Dolores libero provident maxime ea animi quidem quibusdam temporibus, nulla vitae! Deleniti.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam consequatur iusto sint minima hic possimus nisi reprehenderit placeat excepturi dolorum aut officia deleniti quas impedit quis recusandae harum molestiae, alias dicta accusamus officiis error corporis explicabo. Reiciendis rem quam laboriosam doloremque aliquid ex cum accusantium ab, unde, eveniet ullam exercitationem quae eius esse vero quisquam. Voluptatum, eaque alias fugit sit asperiores optio! Esse, libero! Praesentium sapiente et animi asperiores, odit est possimus sunt officiis accusantium aut dicta ducimus dolorum facere quae pariatur ea neque repellat, similique quibusdam exercitationem facilis ut recusandae? Nisi facere tempora exercitationem veniam nesciunt similique labore quis?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, quam laborum repudiandae magnam dolorem quaerat eligendi et distinctio, exercitationem harum omnis corporis veritatis, fugiat voluptas. Tempora voluptatem, laudantium distinctio tenetur iure cupiditate eum iste accusamus asperiores odit vero perspiciatis ea. Optio, sequi. Illo, ratione tempora accusantium amet eveniet in molestiae.</p>
+        <section>
+            <h1>~ Ultimas Noticias ~</h1>
+            <h2>Maior tremor de terra da história do Brasil é registrado na Amazônia</h2>
+            <p>Segundo os geólogos, um tremor com 6,6 graus na Escala Richter nessa profundidade dificilmente é sentido pela população</p>
+            <hr>
+            <p>Por Agências Publicado em 21 de janeiro de 2024 | 14h16 - Atualizado em 21 de janeiro de 2024 | 14h22</p>
+            <p>A Região Norte, registrou, nesse sábado, 20, o maior tremor de terra da história do Brasil. Com 6,6 graus na Escala Richter, segundo o Serviço Geológico dos Estados Unidos, o terremoto ocorreu às 18h31 no horário de Brasília, 16h31 no horário local.
+            </p>
+            <p>Embora o Serviço Geológico dos Estados Unidos informe que o terremoto tenha ocorrido próximo a Tarauacá, no Acre, as coordenadas exatas do tremor apontam para uma área isolada em Ipixuna, no Amazonas.</p>
+            <p>Até agora, não há registro de danos. Isso porque o abalo ocorreu a 614,5 quilômetros de profundidade, o que permite a dissipação da energia. Segundo os geólogos, um tremor nessa profundidade dificilmente é sentido pela população.</p>
+            <p>O Centro de Redes de Terremotos da China também registrou o tremor na Amazônia. O órgão do país asiático mediu a mesma intensidade, de 6,6 graus na Escala Richter, mas o órgão apontou profundidade maior, de 630 quilômetros.</p>
+            <p>Em 7 de junho de 2022, Tarauacá, no noroeste do Acre, tinha registrado abalo de 6,5 graus, o segundo maior tremor da história do País. Na ocasião, o terremoto não deixou vítimas, nem danos materiais.</p>
+            <p>Os tremores ocorrem porque a região está próxima da Cordilheira dos Andes, uma das zonas com maior atividade sísmica do planeta. Nos últimos 45 anos, houve quase cem abalos sísmicos em um raio de 250 quilômetros de Tarauacá, segundo o Serviço Geológico dos Estados Unidos. Nenhum deles, porém, teve consequências graves.</p>
+            <p>Até agora, nem os governos do Acre e do Amazonas, nem as prefeituras de Tarauacá e Ipixuna se manifestaram. Antes das ocorrências deste fim de semana, o maior abalo sísmico da história do Brasil tinha sido registrado na região da Serra do Tombador, em Mato Grosso, em 31 de janeiro de 1955, com 6,2 graus na Escala Richter. (Estadão Conteúdo)</p>
+        </section>
     </main>
     <aside>
-        <picture>
-            Picture
-        </picture>
-        <article>
-            About Me Blurd
+        <article id="a1">
         </article>
-        <section>
-            Recent Tweets
-        </section>
+        <article id="a2">
+            
+        </article>
+        <article id="a3">
+            
+        </article>
     </aside>
     <footer>
-        Footer
+        <p><strong>Desenvolvido por ~ Os Delicios ~</strong></p>
     </footer>
 </body>
 </html>
