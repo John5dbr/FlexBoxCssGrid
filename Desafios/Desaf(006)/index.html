@@ -63,7 +63,32 @@
         .link:hover {
             transition-duration: 0.3s;
             background: #0f8581;
-            border-bottom: 5px solid #085753;
+            border-bottom: 5px solid #085753;   
+        }
+        ul {
+            position: absolute;
+            background: #0e6663;
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.445);
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            display: none;
+        }
+        #u1 {
+            left: 32%;
+            top: 20%;
+        }
+        #u2 {
+            left: 44.5%;
+            top: 20%;
+        }
+        #u3 {
+            left: 54%;
+            top: 20%;
+        }
+        #u4 {
+            left: 59%;
+            top: 20%;
         }
         main {
             display: flex;
@@ -158,9 +183,41 @@
     </a>
     <nav>
         <article><a class="link" href="">Clima/Temperatura</a></article>
+        <section>
+            <ul type="none" id="u1">
+                <li><p>Previsão do Tempo</p></li>
+                <li><p>Calor</p></li>
+                <li><p>Frio</p></li>
+                <li><p>Nublado</p></li>
+            </ul>
+        </section>
         <article><a class="link" href="">Noticia Internacionais</a></article>
+        <section>
+            <ul type="none" id="u2">
+                <li><p>Continente Africano</p></li>
+                <li><p>Continente Americano</p></li>
+                <li><p>Continente Europeu</p></li>
+                <li><p>Continente Asiatico</p></li>
+            </ul>
+        </section>
         <article><a class="link" href="">Política</a></article>
-        <article><a class="link" href="">Estados</a></article>
+        <section>
+            <ul type="none" id="u3">
+                <li><p>Ultimas leis</p></li>
+                <li><p>Decições</p></li>
+                <li><p>Corrupção</p></li>
+                <li><p>Votação</p></li>
+            </ul>
+        </section>
+        <article><a class="link" href="">Região</a></article>
+        <section>
+            <ul type="none" id="u4">
+                <li><p>Norte</p></li>
+                <li><p>Sul</p></li>
+                <li><p>Leste</p></li>
+                <li><p>Oeste</p></li>
+            </ul>
+        </section>
     </nav>
     <main>        
         <section>
