@@ -84,6 +84,7 @@ main {
     flex: 1 0 60vw;
     flex-flow: row wrap;
     overflow: auto;
+    height: 440px;
 }
 main > section {
     height: 440px;
