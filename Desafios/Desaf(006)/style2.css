@@ -83,10 +83,11 @@ main {
     margin: 5px;
     flex: 1 0 60vw;
     flex-flow: row wrap;
+    height: 440px;
     overflow: auto;
+    box-shadow: inset 1px 1px 10px rgba(107, 107, 107, 0.678);
 }
 main > section {
-    height: 440px;
     display: flex;
     background-color: rgb(255, 255, 255);
     margin: 0px;
@@ -203,7 +204,6 @@ footer {
 }
 @media (max-width: 400px) {
     header {
-        border-bottom: 1px solid #0a504d9d;
         height: 50px;
         width: 100vw;
         background-size: 200px;
@@ -214,23 +214,10 @@ footer {
     #menu {
         height: 30px;
         width: 30px;
-        background: url('imagens/menu_icon-icons.com_72311.png') center;
+        background: url('imagens/menu_icon-icons.com_72311.png');
         background-size: cover;
     }
-    main {
-        background-color: #0a504d;
-    }
-    main > section {
-        width: 300px;
-    }
-    #principal {
-        height: 244px;
-        flex: 0 0 290px;
-    }
-    #s3 {
-        flex: 1 0 200px;
-    }
-    footer {
-        width: 290px;
+    aside {
+        flex-flow: column wrap;
     }
 }
