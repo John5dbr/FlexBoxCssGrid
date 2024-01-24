@@ -221,16 +221,16 @@ footer {
         background-color: #0a504d;
     }
     main > section {
-        width: 300px;
+        width: 100vw;
     }
     #principal {
         height: 244px;
-        flex: 0 0 290px;
+        flex: 0 0 97vw;
     }
     #s3 {
-        flex: 1 0 200px;
+        flex: 1 0 91vw;
     }
     footer {
-        width: 290px;
+        width: 97vw;
     }
 }
