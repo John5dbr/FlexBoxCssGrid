@@ -202,7 +202,7 @@ footer {
         height: 312px;
     }
 }
-@media (max-width: 450px) {
+@media (max-width: 490px) {
     header {
         border-bottom: 1px solid #0a504d9d;
         height: 50px;
