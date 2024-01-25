@@ -30,21 +30,20 @@ header {
     display: flex;
     margin: 0px;
     width: 100vw;
-    height: 18vh;
+    height: 19vh;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #0a504d9d;
 }
 nav {
     z-index: 0;
     flex-flow: column wrap;
     position: fixed;
-    bottom: -1px;
+    bottom: 0px;
     display: flex;
     background-color: #118a80f8;
     margin: 0px;
     width: 100vw;
-    height: calc(100vh - 18vh);
+    height: calc(100vh - 19vh);
     justify-content: space-evenly;
     align-items: center;
 }
@@ -60,10 +59,12 @@ nav {
     text-decoration: none;
     font-family: 'Roboto';
     border-bottom: 3px solid #085753;   
+    width: 100px;
+    height: 30px;
 }
 .link:hover {
     transition-duration: 0.3s;
-    background: #0e7975;
+    background: #0a6e6b;
     border-bottom: 3px solid #085753;   
 }
 ul {
@@ -202,10 +203,11 @@ footer {
 }
 @media (max-width: 1100px) {
     header {
-        height: 18vh;
+        height: 16vh;
+        background-size: 320px;
     }
     nav {
-        height: calc(100vh - 15vh);
+        height: calc(100vh - 16vh);
     }
     aside > section {
         height: 110px;
@@ -219,6 +221,7 @@ footer {
 }
 @media (max-width: 450px) {
     header {
+        border-bottom: 1px solid #0a504d9d;
         height: 15vh;
         width: 100vw;
         background-size: 260px;
@@ -226,7 +229,7 @@ footer {
     nav {
         height: calc(100vh - 15vh);
     }
-        main {
+    main {
         background-color: #0a504d;
     }
     main > section {
