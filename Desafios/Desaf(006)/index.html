@@ -4,87 +4,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/icon2.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Noticias-Eco</title>
+    <title>ECO-DESIGN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sriracha&display=swap');
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        :root {
+            --cor1: #01746B;
+            --cor2: #105E5B;
+        } 
+        body {
+            display: flex;
+            flex-flow: column wrap;
+        }
+        header {
+            display: flex;
+            background: var(--cor1);
+            height: 75px;
+            flex-flow: row wrap;
+            flex: 1 0 50px;
+        }
+        header > picture {
+            margin: 0px;
+            justify-content: flex-end;
+            flex: 1.1 0 100px;
+            align-items: center;
+            background: url('imagens(1)/image-removebg-preview.png') no-repeat center left;
+            background-size: 300px;
+            width: 200px;
+        }
+        nav {
+            display: flex;
+            background: var(--cor1);
+            flex-flow: row wrap;
+            flex: 1.7 0 100px;
+            justify-content: center;
+            align-items: center;
+        }
+        nav > article {
+            font-family: 'Roboto'; 
+            padding: 27px 20px;
+            color: white;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        nav > article:hover {
+            transition-duration: 0.3s;
+            background: var(--cor2);
+        }
+        main {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            height: 30vh;
+        }
+        #grande {
+            flex: 1 0;
+            background: url('imagens(1)/pexels-jess-loiterton-4609689.jpg') no-repeat center;
+            background-size: cover;
+        }
+        p {
+            align-self: flex-end;
+            margin: 15px 0px;
+            text-align: justify;
+            font-family: 'Roboto'; 
+        }
+        aside {
+            align-self: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 60vw;
+            height: 56vh;
+            background: rgb(255, 255, 255);
+        }
+        aside > picture {
+            box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.603);
+        }
+        #i1 {
+            width: 17vw;
+            height: 17vw;
+            background: url("imagens(1)/pexels-eberhard-grossgasteiger-2437286.jpg") no-repeat center;
+            background-size: cover;
+        }
+        #i2 {
+            width: 17vw;
+            height: 17vw;
+            background: url("imagens(1)/pexels-brett-sayles-3697352.jpg") no-repeat center;;
+            background-size: cover;
+        }
+        #i3 {
+            width: 17vw;
+            height: 17vw;
+            background: url("imagens(1)/pexels-rastislav-durica-6010396.jpg") no-repeat center ;
+            background-size: cover;
+        }
+        @media (max-width: 700px) {
+            aside {
+                width: 80vw;
+            }
+            aside > picture {
+                margin: 5px 0px;
+            }
+            p {
+                margin: 15px 0px;
+            }
+            #i1 {
+                width: 25vw;
+                height: 25vw;
+            }
+            #i2 {
+                width: 25vw;
+                height: 25vw;
+            }
+            #i3 {
+                width: 25vw;
+                height: 25vw;
+            }
+            header > picture {
+                background-size: 240px;
+            }
+        }
+        @media (max-width: 650px) {
+            nav {
+                justify-content: flex-start;
+                flex: 1.3 0;
+            }
+            nav > article {
+                padding: 10px;
+                text-align: center;
+            }
+            #o1 {
+                flex: 1 0 ;
+            }
+            #o2 {
+                flex: 1 0 ;
+            }
+            #o3 {
+                flex: 1 0 180px;
+            }
+            header {
+                flex: 0 0;
+            }
+            header > picture {
+                background-size: 250px;
+            }
+        }
+        @media (max-width: 450px) {
+            nav {
+                justify-content: flex-start;
+                flex: 1 0;
+            }
+            nav > article {
+                padding: 6px;
+                text-align: center;
+            }
+            #o1 {
+                flex: 1 0;
+            }
+            #o2 {
+                flex: 1 0;
+            }
+            #o3 {
+                flex: 1 0 80px;
+            }
+            header {
+                flex: 1 0;
+                justify-content: center;
+            }
+            header > picture {
+                flex: 1.2 0;
+                background-size: 170px;
+            }
+            aside {
+                width: 90vw;
+            }
+            p {
+                margin-top: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <a href="/Desafios/Desaf(005)/index.html">
-        <header>
-        </header>
-    </a>
-    <nav>
-        <article id="art1"><a class="link" href="">Clima/Temperatura</a></article>
-        <section>
-            <ul type="none" id="u1">
-                <li><p>Previsão do Tempo</p></li>
-                <li><p>Calor</p></li>
-                <li><p>Frio</p></li>
-                <li><p>Nublado</p></li>
-            </ul>
-        </section>
-        <article id="art2"><a class="link" href="">Noticia Internacionais</a></article>
-        <section>
-            <ul type="none" id="u2">
-                <li><p>Continente Africano</p></li>
-                <li><p>Continente Americano</p></li>
-                <li><p>Continente Europeu</p></li>
-                <li><p>Continente Asiatico</p></li>
-            </ul>
-        </section>
-        <article id="art3"><a class="link" href="">Política</a></article>
-        <a id="menu" href="index(002).html">
-        </a>
-        <section>
-            <ul type="none" id="u3">
-                <li><p>Ultimas leis</p></li>
-                <li><p>Decições</p></li>
-                <li><p>Corrupção</p></li>
-                <li><p>Votação</p></li>
-            </ul>
-        </section>
-        <article id="art4"><a class="link" href="">Região</a></article>
-        <section>
-            <ul type="none" id="u4">
-                <li><p>Norte</p></li>
-                <li><p>Sul</p></li>
-                <li><p>Leste</p></li>
-                <li><p>Oeste</p></li>
-            </ul>
-        </section>
-    </nav>
-    <main>        
-        <section>
-            <h1>~ Ultimas Noticias ~</h1>
-            <h2>Maior tremor de terra da história do Brasil é registrado na Amazônia</h2>
-            <p>Segundo os geólogos, um tremor com 6,6 graus na Escala Richter nessa profundidade dificilmente é sentido pela população</p>
-            <hr>
-            <p>Por Agências Publicado em 21 de janeiro de 2024 | 14h16 - Atualizado em 21 de janeiro de 2024 | 14h22</p>
-            <p>A Região Norte, registrou, nesse sábado, 20, o maior tremor de terra da história do Brasil. Com 6,6 graus na Escala Richter, segundo o Serviço Geológico dos Estados Unidos, o terremoto ocorreu às 18h31 no horário de Brasília, 16h31 no horário local.
-            </p>
-            <p>Embora o Serviço Geológico dos Estados Unidos informe que o terremoto tenha ocorrido próximo a Tarauacá, no Acre, as coordenadas exatas do tremor apontam para uma área isolada em Ipixuna, no Amazonas.</p>
-            <p>Até agora, não há registro de danos. Isso porque o abalo ocorreu a 614,5 quilômetros de profundidade, o que permite a dissipação da energia. Segundo os geólogos, um tremor nessa profundidade dificilmente é sentido pela população.</p>
-            <p>O Centro de Redes de Terremotos da China também registrou o tremor na Amazônia. O órgão do país asiático mediu a mesma intensidade, de 6,6 graus na Escala Richter, mas o órgão apontou profundidade maior, de 630 quilômetros.</p>
-            <p>Em 7 de junho de 2022, Tarauacá, no noroeste do Acre, tinha registrado abalo de 6,5 graus, o segundo maior tremor da história do País. Na ocasião, o terremoto não deixou vítimas, nem danos materiais.</p>
-            <p>Os tremores ocorrem porque a região está próxima da Cordilheira dos Andes, uma das zonas com maior atividade sísmica do planeta. Nos últimos 45 anos, houve quase cem abalos sísmicos em um raio de 250 quilômetros de Tarauacá, segundo o Serviço Geológico dos Estados Unidos. Nenhum deles, porém, teve consequências graves.</p>
-            <p>Até agora, nem os governos do Acre e do Amazonas, nem as prefeituras de Tarauacá e Ipixuna se manifestaram. Antes das ocorrências deste fim de semana, o maior abalo sísmico da história do Brasil tinha sido registrado na região da Serra do Tombador, em Mato Grosso, em 31 de janeiro de 1955, com 6,2 graus na Escala Richter. (Estadão Conteúdo)</p>
-        </section>
+    <header>
+        <nav>
+            <article id="o1">
+                <a href="/Desafios/Desaf(006)/index.Noticia.html">
+                    Noticias
+                </a>
+            </article>
+            <article id="o2">
+                <a href="index.html">
+                    Sobre
+                </a>
+            </article>
+            <article id="o3">
+                <a href="">
+                    Contato
+                </a>
+            </article>
+        </nav>
+        <picture></picture>
+    </header>
+    <main>
+        <picture id="grande"></picture>
     </main>
-    <aside id="principal">
-        <section  id="s1">
-            <article id="a1">
-            </article>
-        </section>
-        <section id="s2">
-            <article id="a2">
-            </article>
-        </section>
-        <section id="s3">
-            <article id="a3">
-            </article>
-        </section>
+    <aside>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque blanditiis voluptatum, incidunt magni consequatur quasi saepe similique vel ab, alias itaque totam voluptatibus eum in a officia debitis mollitia tenetur sint quas non. Debitis dolorum iste voluptates consequatur cumque eaque molestiae beatae. Deleniti aut, ipsa incidunt a sunt unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. At nemo id, vel, aliquid qui asperiores veniam porro harum dolorem modi voluptatem. Dolores quia sit voluptatibus et error quasi.</p>
+        <picture id="i1"></picture>
+        <picture id="i2"></picture>
+        <picture id="i3"></picture>
     </aside>
-    <footer>
-        <p><strong>Desenvolvido por ~ Os Delicios ~</strong></p>
-    </footer>
 </body>
 </html>
