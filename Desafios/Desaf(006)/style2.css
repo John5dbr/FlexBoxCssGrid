@@ -222,12 +222,12 @@ footer {
 @media (max-width: 450px) {
     header {
         border-bottom: 1px solid #0a504d9d;
-        height: 15vh;
+        height: 100px;
         width: 100vw;
         background-size: 260px;
     }
     nav {
-        height: calc(100vh - 15vh);
+        height: calc(100vh - 100px);
     }
     main {
         background-color: #0a504d;
