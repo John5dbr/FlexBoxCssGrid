@@ -19,7 +19,6 @@
             flex-flow: column wrap;
         } 
         header {
-            background: var(--cor1);
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
@@ -27,31 +26,109 @@
             height: 12vh;
             width: 100vw;
         }
-        nav {
-            background: var(--cor1);
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+        header > a {
+            background: url('imagens(1)/image-removebg-preview.png') no-repeat left;
+            background-size: 365px;
+            flex: 3 0;
             height: 12vh;
         }
-        picture {
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 12vh;
+            flex: 1 0 100px;
+        }
+        nav > article {
+            display: flex;
+            height: 12vh;
+            width: 90px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        nav > article:hover {
+            background: rgba(0, 0, 0, 0.336);
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Roboto';
+        }
+        #grande {
+            z-index: -1;
+            position: fixed;
             background: url('imagens(2)/pexels-noor-rassam-19787758.jpg') no-repeat center;
             background-size: cover;
-            height: 47vh;
             width: 100vw;
         }
         main {
+            margin-top: calc(100vh - 48vh - 12vh);
             display: flex;
-            background: #105E5B;
-            height: 40vh;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            background: #ffffff;
+            height: 30vh;
             width: 100vw;
         }
-
+        p, h1, h2 {
+            color: rgb(0, 0, 0);
+            font-family: 'Roboto';
+            text-align: justify;
+        }
+        aside {
+            display: flex;
+            flex-flow: row wrap;
+        } 
+        aside > a {
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+        }
+        #p1 {
+            background: url('imagens(2)/image-removebg-preview.png') no-repeat center;
+            background-size: cover;
+        }
+        #p2 {
+            background: url('imagens(2)/image-removebg-preview (1).png') no-repeat center;
+            background-size: cover;
+        }
+        #p3 {
+            background: url('imagens(2)/image-removebg-preview (3).png') no-repeat center;
+            background-size: cover;
+        }
+        @media (max-width: 1360px) {
+            p, h1, h2 {
+                margin: 0px 20vw;
+ 
+            }
+        }
+        @media (max-width: 800px) {
+            #grande {
+                height: 40vh;
+            }
+            main {
+                height: 47vh;
+                padding-bottom: 5px;
+            }
+            p, h1, h2 {
+                margin: 5px 10vw;
+            }
+        }
+        @media (max-width: 500px) {
+            p, h1, h2 {
+                margin: 10px 5vw;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        Header
+        <a href="">
+            <article>
+            </article>
+        </a>
         <nav>
             <article>
                 <a href="index.Noticia.html">Noticia</a>
@@ -61,11 +138,24 @@
             </article>
         </nav>
     </header>
-    <picture>
-        Picture
-    </picture>
+    <div id="grande">
+        <picture>
+        </picture>
+    </div>
     <main>
-        Main
+        <p>Entre em contato conosco para obter informações sobre nossos serviços e produtos de qualidade excepcional! Estamos aqui para atendê-lo com dedicação e eficiência. Envie-nos uma mensagem ou ligue para nossa equipe especializada. Sua satisfação é nossa prioridade.</p>
+        <p>Descubra como podemos atender às suas necessidades de maneira personalizada e eficaz. Aguardamos ansiosamente seu contato para construir uma parceria de sucesso. Confie em nós para proporcionar a melhor experiência. Estamos prontos para ouvir e oferecer soluções sob medida para você!</p>
+        <aside>
+            <a id="p1" href="">
+                <picture></picture>
+            </a>
+            <a id="p2" href="">
+                <picture></picture>
+            </a>
+            <a id="p3" href="">
+                <picture></picture>
+            </a>
+        </aside>
     </main>
 </body>
 </html>
