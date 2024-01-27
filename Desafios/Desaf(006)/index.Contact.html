@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato-Eco</title>
+    <link rel="shortcut icon" href="imagens/icon2.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sriracha&display=swap');
         * {
@@ -13,8 +14,8 @@
         :root {
             --cor1: #01746B;
             --cor2: #105E5B;
-        } 
-        body {
+        }
+        body {  
             display: flex;
             flex-flow: column wrap;
         } 
@@ -56,20 +57,31 @@
             font-family: 'Roboto';
         }
         #grande {
-            z-index: -1;
             position: fixed;
             background: url('imagens(2)/pexels-noor-rassam-19787758.jpg') no-repeat center;
             background-size: cover;
             width: 100vw;
+            height: 50vh;
+            box-shadow: inset 1px 1px 15px black;
+        }
+        #grande:hover {
+            filter: blur(1.2);
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+        }
+        #pai {
+            z-index: -1;
+            position: fixed;
+            overflow: hidden;
         }
         main {
             margin-top: calc(100vh - 48vh - 12vh);
             display: flex;
-            flex-flow: column wrap;
+            flex-flow: column;
             align-items: center;
             justify-content: space-evenly;
             background: #ffffff;
-            height: 30vh;
+            height: 00vh;
             width: 100vw;
         }
         p, h1, h2 {
@@ -79,7 +91,7 @@
         }
         aside {
             display: flex;
-            flex-flow: row wrap;
+            flex-flow: row;
         } 
         aside > a {
             height: 50px;
@@ -101,24 +113,26 @@
         @media (max-width: 1360px) {
             p, h1, h2 {
                 margin: 0px 20vw;
- 
             }
         }
         @media (max-width: 800px) {
             #grande {
-                height: 40vh;
+                height: 47vh;
             }
             main {
-                height: 47vh;
+                height: 45vh;
                 padding-bottom: 5px;
             }
             p, h1, h2 {
                 margin: 5px 10vw;
             }
         }
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
             p, h1, h2 {
                 margin: 10px 5vw;
+            }
+            header > a {
+                background-size: 300px;
             }
         }
     </style>
@@ -138,8 +152,8 @@
             </article>
         </nav>
     </header>
-    <div id="grande">
-        <picture>
+    <div id="pai">
+        <picture id="grande">
         </picture>
     </div>
     <main>
