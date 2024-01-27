@@ -61,6 +61,7 @@ nav {
     border-bottom: 3px solid #085753;   
     width: 100px;
     height: 30px;
+    margin: 20px;
 }
 .link:hover {
     transition-duration: 0.3s;
@@ -222,12 +223,12 @@ footer {
 @media (max-width: 450px) {
     header {
         border-bottom: 1px solid #0a504d9d;
-        height: 60px;
+        height: 80px;
         width: 100vw;
         background-size: 260px;
     }
     nav {
-        height: calc(100vh - 60px);
+        height: calc(100vh - 95px);
     }
     main {
         background-color: #0a504d;
