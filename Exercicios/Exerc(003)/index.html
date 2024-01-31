@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CssGrid - Aula 2</title>
+    <style>
+        /* Alinhamento */
+        
+        /*
+        .container {
+            display: grid;
+            gap: 10px;
+            background: darkgray;
+            border: 1.5px solid black;
+            padding: 15px; 
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+            height: 250px;
+              > Alinhamento horizontal <
+            justify-content: center;
+              > Alinhamento vertical <
+            align-items: center;
+        }
+        .container > div {
+            background: darkslategray;
+            border: 1.5px solid black;
+            padding: 20px;
+        }
+        */
+
+        /* Itens */
+
+        .container {
+            display: grid;
+            background: darkgray;
+            border: 1.5px solid black;
+            padding: 15px; 
+            height: 92vh;
+            grid-template-columns: auto auto auto;
+            text-align: center;
+        }
+        .container > div {
+            background: darkslategray;
+            border: 1.5px solid black;
+            padding: 20px;
+        } 
+        #item1 {
+            /* Define em que coluna o elemento filho começa */
+            grid-column-start: 1;
+            /* Define em que coluna o elemento filho termina */
+            grid-column-end: 4;
+        }
+        #item2 {
+            /* Define em que linha o elemento filho começa */
+            grid-row-start: 2;
+            /* Define em que linha o elemento filho termina */
+            grid-row-end: 4;
+        }
+        #item3 {
+            height: 50px;
+            width: 50px;
+            justify-self: center;
+            align-self: center;
+        }
+        #item4 {
+            height: 50px;
+            width: 50px;
+            /* Alinhamento horizontal do elemento filho */
+            justify-self: center;
+            /* Alinhamento verical do elemento filho */
+            align-self: center;
+        }
+        #item5 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Alinhamento -->
+
+    <!--
+    <div class="container">
+        <div class="filho">1</div>
+        <div class="filho">2</div>
+        <div class="filho">3</div>
+        <div class="filho">4</div>
+        <div class="filho">5</div>
+        <div class="filho">6</div>   
+    </div>
+    -->
+
+    <!-- Itens -->
+
+    <div class="container">
+        <div id="item1" class="filho">1</div>
+        <div id="item2" class="filho">2</div>
+        <div id="item3" class="filho">3</div>
+        <div id="item4" class="filho">4</div>
+        <div id="item5" class="filho">5</div>  
+    </div>
+</body>
+</html>

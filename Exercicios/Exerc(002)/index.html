@@ -5,45 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CssGrid - Aula 1</title>
     <style>
+        /*
         .container {
             display: grid;
             background: darkgray;
             border: 1.5px solid black;
             padding: 15px;
-            /* 
-               Largura referente a cada coluna:
-               o primeiro valor se refere a largura da primeira coluna, o segundo se refere a 
-               largura da segunda e assim por diante.
-            */
+ 
+                Largura referente a cada coluna:
+                o primeiro valor se refere a largura da primeira coluna, o segundo se refere a 
+                largura da segunda e assim por diante.
+
             grid-template-columns: 100px auto 100px;
-            /* 
-               Altura referente a cada linha:
-               o primeiro valor se refere a altura da primeira linha, o segundo se refere a 
-               altura da segunda e assim por diante.
-            */
+      
+                Altura referente a cada linha:
+                o primeiro valor se refere a altura da primeira linha, o segundo se refere a 
+                altura da segunda e assim por diante.
+            
             grid-template-rows: 100px 100px;
-            /* 
-               shorthand que resume a propriedade grid-row-gap e grid-column-gap:
-               o primeiro valor define o espaço entre as linhas, o segundo valor define o espaço entre as colunas, caso seja posto apenas um valor, o espaçamento é definido para os dois.
-            */
+             
+                shorthand que resume a propriedade grid-row-gap e grid-column-gap:
+                o primeiro valor define o espaço entre as linhas, o segundo valor define o espaço entre as colunas, caso seja posto apenas um valor, o espaçamento é definido para os dois.
+            
             gap: 10px;
-        }
+        } 
         .filho {
             background: darkslategray;
             border: 1.5px solid black;
             padding: 20px;
         }
+        */
+        
+        /* Template area */
+        
+        .container {
+            display: grid;
+            background: darkgray;
+            border: 1.5px solid black;
+            padding: 15px; 
+            gap: 10px;
+            /* 
+                Define o posicionamento dos elementos filhos no layout e tamanho, quanto mais colunas estiver sendo declaradas menos % elas ocupam.    
+            */
+            grid-template-areas: 
+              'header header header header'
+              'content content content sidebar'
+              'footer footer footer footer';
+        }
+        .container > div {
+            background: darkslategray;
+            border: 1.5px solid black;
+            padding: 20px;
+        }
+        #header {
+            /*
+                Define o nome que sera usado para declara-la no grid-template-areas
+            */
+            grid-area: header;
+        }
+        #sidebar {
+            height: 54vh;
+            grid-area: sidebar;
+        }
+        #content {
+            height: 54vh;
+            grid-area: content;
+        }
+        #footer {
+            grid-area: footer;
+        }
     </style>
 </head>
 <body>
     <!-- Inicio Grid -->
-    <div class="container">
-        <div class="filho">1</div>
-        <div class="filho">2</div>
-        <div class="filho">3</div>
-        <div class="filho">4</div>
-        <div class="filho">5</div>
-        <div class="filho">6</div>   
+    <!--
+        <div class="container">
+            <div class="filho">1</div>
+            <div class="filho">2</div>
+            <div class="filho">3</div>
+            <div class="filho">4</div>
+            <div class="filho">5</div>
+            <div class="filho">6</div>   
+        </div>
+    -->
+    <div class="container" id="template-areas">
+        <div id="header">
+            <p>Cabeçalho</p>
+        </div>
+        <div id="sidebar">
+            <p>Sidebar</p>
+        </div>
+        <div id="content">
+            <p>Conteúdo</p>
+        </div>
+        <div id="footer">
+            <p>Rodapé</p>            
+        </div>
     </div>
 </body>
 </html>
