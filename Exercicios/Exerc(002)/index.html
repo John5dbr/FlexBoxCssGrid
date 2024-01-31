@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CssGrid - Aula 1</title>
+    <style>
+        .container {
+            display: grid;
+            background: darkgray;
+            border: 1.5px solid black;
+            padding: 15px;
+            /* 
+               Largura referente a cada coluna:
+               o primeiro valor se refere a largura da primeira coluna, o segundo se refere a 
+               largura da segunda e assim por diante.
+            */
+            grid-template-columns: 100px auto 100px;
+            /* 
+               Altura referente a cada linha:
+               o primeiro valor se refere a altura da primeira linha, o segundo se refere a 
+               altura da segunda e assim por diante.
+            */
+            grid-template-rows: 100px 100px;
+            /* 
+               shorthand que resume a propriedade grid-row-gap e grid-column-gap:
+               o primeiro valor define o espaço entre as linhas, o segundo valor define o espaço entre as colunas, caso seja posto apenas um valor, o espaçamento é definido para os dois.
+            */
+            gap: 10px;
+        }
+        .filho {
+            background: darkslategray;
+            border: 1.5px solid black;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Inicio Grid -->
+    <div class="container">
+        <div class="filho">1</div>
+        <div class="filho">2</div>
+        <div class="filho">3</div>
+        <div class="filho">4</div>
+        <div class="filho">5</div>
+        <div class="filho">6</div>   
+    </div>
 </body>
 </html>
