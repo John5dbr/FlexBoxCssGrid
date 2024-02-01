@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2 - CssGrid</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        :root {
+            --cor1: #9BFFEA; 
+            --cor2: #02FFFF; 
+            --cor3: #75FFFF; 
+            --cor4: #61FFCE; 
+            --cor5: #52FFD8; 
+            --cor6: #63FFB1; 
+            --cor7: #02D8A4;
+        }
+        #container {
+            display: grid;
+            gap: 5px;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 10% 40% 30% 17.6%;
+            grid-template-areas: 
+              'header header header header'
+              'aside main main main'
+              'aside s1 s2 s3'
+              'aside footer footer footer';
+        }
+        .item {
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.644);
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        } 
+        #header {
+            background: var(--cor1);
+            grid-area: header;
+        }
+        #aside {
+            background: var(--cor2);
+            grid-area: aside;
+        }
+        #main {
+            background: var(--cor3);
+            grid-area: main;
+        }
+        #s1 {
+            background: var(--cor4);
+            grid-area: s1;
+        }
+        #s2 {
+            background: var(--cor5);
+            grid-area: s2;
+        }
+        #s3 {
+            background: var(--cor6);
+            grid-area: s3;
+        }
+        #footer {
+            background: var(--cor7);
+            grid-area: footer;
+        }
+        @media (max-width: 600px) {
+            #container {
+                grid-template-rows: 10% 8% 33.3% 12% 12% 12% 8%;
+                grid-template-areas: 
+                   'header header header header'
+                   'aside aside aside aside'
+                   'main main main main'
+                   's1 s1 s1 s1'
+                   's2 s2 s2 s2'
+                   's3 s3 s3 s3'
+                   'footer footer footer footer';
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header class="item" id="header">
+            <p>Header</p>
+        </header>
+        <aside class="item" id="aside">
+            <p>Aside</p>
+        </aside>
+        <main class="item" id="main">
+            <p>Main</p>
+        </main>
+        <section class="item" id="s1">
+            <p>Content 1</p>
+        </section>
+        <section class="item" id="s2">
+            <p>Content 2</p>
+        </section>
+        <section class="item" id="s3">
+            <p>Content 3</p>
+        </section>
+        <footer class="item" id="footer">
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>

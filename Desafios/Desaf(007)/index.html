@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1 - CssGrid</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        #container {
+            display: grid;
+            background: darkgray;
+            width: 100vw;
+            height: 100vh;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto auto auto;
+            gap: 10px;
+        }
+        .filho {
+            display: grid;
+            background: #2f4f4f;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+        .filho:hover {
+            background: #203a3a;
+        }
+        #f1 {
+            grid-column-start: 1; 
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        #f4 {
+            grid-column-start: 1; 
+            grid-column-end: 3;
+        }
+        #f5 {
+            grid-column-start: 3; 
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="f1" class="filho">1</div>
+        <div id="f2" class="filho">2</div>
+        <div id="f3" class="filho">3</div>
+        <div id="f4" class="filho">4</div>
+        <div id="f5" class="filho">5</div>
+    </div>
+</body>
+</html>
