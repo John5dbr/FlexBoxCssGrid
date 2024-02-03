@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 3 - CssGrid</title>
+    <style>
+        * {
+            margin: 0px;
+            height: 0px;
+        }
+        body {
+            background-color: #1E1D28;
+            display: grid;
+            grid-template-columns: auto 70% auto;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+               'header header header'
+               'a1 main a2'
+               'footer footer footer';
+        }
+        header, aside, main, footer {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        header {
+            margin: 5px;
+            background: #FFCB03;
+            height: 15vh;
+            grid-area: header;
+        }
+        #a1 {
+            margin: 5px;
+            background: #64C799;
+            height: 65vh;
+            grid-area: a1;
+        }
+        main {
+            margin: 5px;
+            background: #FF6668;
+            height: 65vh;
+            grid-area: main;
+        }
+        #a2 {
+            margin: 5px;
+            background: #9998FF;
+            height: 65vh;
+            grid-area: a2;
+        } 
+        footer {
+            margin: 5px;
+            background: #62BEED;
+            height: 15vh;
+            grid-area: footer;
+        }
+        @media (max-width: 750px) {
+            body {
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: 
+                   'header header'
+                   'main main'
+                   'a1 a2'
+                   'footer footer';
+            }
+            #a1, #a2 {
+                height: 15vh;
+            }
+            main {
+                height: 50vh;
+            }
+            footer {
+                height: 13vh;
+            }
+        }
+        @media (max-width: 500px) {
+            body {
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto auto;
+                grid-template-areas: 
+                   'header'
+                   'main'
+                   'a1'
+                   'a2'
+                   'footer';
+            }
+            header {
+                height: 7vh;
+            }
+            #a1, #a2 {
+                height: 15vh;
+            }
+            main {
+                height: 48vh;
+            }
+            footer {
+                height: 7vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Header</p>
+    </header>
+    <aside id="a1">
+        <p>Aside</p>
+    </aside>
+    <main>
+        <p>Main</p>
+    </main>
+    <aside id="a2">
+        <p>Aside</p>
+    </aside>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>
