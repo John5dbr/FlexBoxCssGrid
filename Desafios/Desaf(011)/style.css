@@ -116,11 +116,21 @@ section > p {
     grid-area: s1;
 }
 #p1 {
+    display: grid;
+    justify-content: start;
+    align-items: center;
     background: url('imagens/pexels-zhang-kaiyv-565476.jpg')
     no-repeat center fixed;
     background: cover;
     grid-area: p1;
     height: 60vh;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.329);
+}
+picture > section {
+    margin: 20px 30px;
+    height: 300px;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.267);
 }
 #s2 {
     grid-area: s2;
@@ -132,7 +142,10 @@ footer {
     height: 30px;
     grid-area: footer;
     color: rgba(66, 66, 66, 0.623);
-    background: rgba(24, 24, 24, 0.747);
+    background: rgba(24, 24, 24, 0.39);
+}
+@media (max-width: 1360px) {
+
 }
 @media (max-width: 700px) {
     section > p {
