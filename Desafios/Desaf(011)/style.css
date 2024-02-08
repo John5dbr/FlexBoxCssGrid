@@ -50,6 +50,7 @@ header {
     background-size: cover;
     height: 330px;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.514);
+    padding-right: 7vw;
 }
 header > picture {
     grid-area: p1;
@@ -82,7 +83,7 @@ a > p {
 #a1:hover {
     transition-duration: 0.2s;
     background: #35353581;   
-    border-bottom: 4px solid white; 
+    border-bottom: 4px solid var(--cor3); 
 }
 #a2 {
     display: grid;
@@ -95,7 +96,7 @@ a > p {
 #a2:hover {
     transition-duration: 0.2s;
     background: #35353581;   
-    border-bottom: 4px solid white; 
+    border-bottom: 4px solid var(--cor3); 
 }
 main {
     display: grid;
@@ -107,9 +108,14 @@ main {
        's2';
     grid-area: main;
 }
-section > p {
+#s1 > p {
     text-align: justify;
-    margin: 15px 5vw;
+    margin: 20px 8vw;
+    color: black;
+}
+#s2 > p {
+    text-align: justify;
+    margin: 25px 8vw;
     color: black;
 }
 #s1 {
@@ -117,7 +123,7 @@ section > p {
 }
 #p1 {
     display: grid;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
     background: url('imagens/pexels-zhang-kaiyv-565476.jpg')
     no-repeat center fixed;
@@ -125,12 +131,26 @@ section > p {
     grid-area: p1;
     height: 60vh;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.329);
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+       'q1 q2';
 }
-picture > section {
+section > h1 {
+    margin: 10px 0px;
+}
+picture > #q1 {
+    grid-area: q1;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.719);
+    font-size: 1.2em;
+    text-indent: 0px;
+    text-align: left;
     margin: 20px 30px;
-    height: 300px;
-    width: 250px;
-    background: rgba(0, 0, 0, 0.267);
+    width: 40vw;
+}
+picture > #q2 {
+    grid-area: q2;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.719);
 }
 #s2 {
     grid-area: s2;
@@ -143,15 +163,36 @@ footer {
     grid-area: footer;
     color: rgba(66, 66, 66, 0.623);
     background: rgba(24, 24, 24, 0.39);
-}
-@media (max-width: 1360px) {
-
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.616);
 }
 @media (max-width: 700px) {
-    section > p {
-        text-align: justify;
+    #s1 > p {
         text-indent: 15px;
-        margin: 15px 5vw;
-        color: black;
+    }
+    #s2 > p {
+        text-indent: 15px;
+    }
+    header {
+        padding-right: 0px;
+    }
+}
+@media (max-width: 600px) {
+    #p1 {
+        height: 600px;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+           'q1'
+           'q2';
+    }
+    #q2 {
+        padding-left: 30px;
+        text-align: justify;
+    }
+}
+@media (max-width: 520px) {
+    #q2 {
+        text-align: justify;
+        margin: 40px 0px;
     }
 }
