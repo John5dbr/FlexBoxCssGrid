@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'hell';
+    src: url('font/FreeSans.otf');
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+*::-webkit-scrollbar {
+    width: 7px;
+}
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+*::-webkit-scrollbar-thumb {
+    background: rgba(80, 80, 80, 0.767);
+    border-radius: 10px;
+}
+:root {
+    --cor1: #FFFFFF;
+    --cor2: #00A7E1;
+    --cor3: #EFA00B;
+    --cor4: #353535;
+    --cor5: #0F110C;
+}
