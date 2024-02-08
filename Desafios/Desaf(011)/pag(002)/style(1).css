@@ -47,9 +47,11 @@ header {
     grid-template-areas: 
        'p1 nav';
     height: 15vh;
-    background: white;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.253);
+    background: #ffffff;
+    margin-bottom: 380px;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.473);
+    border-bottom: 2px solid #EFA00B;
 }
 header > picture {
     width: 120px;
@@ -96,30 +98,55 @@ nav {
     border-bottom: 3px solid #EFA00B;
 }
 #p1 {
+    z-index: -1;
+    top: 85px;
+    position: absolute;
+    width: 99.5vw;
     grid-area: pic1;
-    background: url('');
+    background: url('imagens(1)/pexels-pok-rie-1432680.jpg') no-repeat center;
+    background-size: cover;
+    height: 370px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.726);
 }
 main {
+    justify-content: center;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 20% 20% 28.5% 28.5%;
     grid-template-rows: auto auto;
     grid-template-areas: 
        's1 s1 s2 s3'
        's1 s1 s4 s5';
+       height: 80vh;
+    gap: 10px;
 }
 #s1 {
+    background: #353535;
+    display: grid;
+    justify-content: center;
     grid-area: s1;
 }
 #s2 {
+    background: #353535;
+    display: grid;
+    justify-content: center;
     grid-area: s2;
 }
 #s3 {
+    background: #353535;
+    display: grid;
+    justify-content: center;
     grid-area: s3;
 }
 #s4 {
+    background: #353535;
+    display: grid;
+    justify-content: center;
     grid-area: s4;
 }
 #s5 {
+    background: #353535;
+    display: grid;
+    justify-content: center;
     grid-area: s5;
 }
 footer {
