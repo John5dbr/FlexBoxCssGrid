@@ -200,11 +200,11 @@ footer {
     header > picture {
         width: 150px;
         height: 180px;
-        background-size: 270px;
+        background-size: 230px;
     }
     #a1, #a2 {
-        height: 50px;
-        width: 105px;
+        height: 60px;
+        width: 115px;
     }
     #p1 {
         height: 600px;
