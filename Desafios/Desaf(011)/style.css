@@ -130,7 +130,7 @@ main {
     background: cover;
     grid-area: p1;
     height: 60vh;
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.329);
+    box-shadow: inset 0px 0px 5000px rgba(0, 0, 0, 0.705);
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -194,5 +194,28 @@ footer {
     #q2 {
         text-align: justify;
         margin: 40px 0px;
+    }
+}
+@media (max-width: 450px) {
+    header > picture {
+        width: 100px;
+        height: 100px;
+        background-size: 150px;
+    }
+    #a1, #a2 {
+        height: 50px;
+        width: 80px;
+    }
+    #p1 {
+        height: 550px;
+    }
+    #q1 > p {
+        font-size: 0.8em;
+    }
+    #q2 > p {
+        font-size: 0.8em;
+    }
+    footer {
+        font-size: 0.9em;
     }
 }
