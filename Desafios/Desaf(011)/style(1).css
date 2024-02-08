@@ -23,3 +23,8 @@
     --cor4: #353535;
     --cor5: #0F110C;
 }
+h1, h2, h3, p, a {
+    font-family: 'hell';
+    text-decoration: none;
+    color: white;
+}

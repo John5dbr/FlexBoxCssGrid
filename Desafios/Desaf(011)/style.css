@@ -198,13 +198,14 @@ footer {
 }
 @media (max-width: 450px) {
     header > picture {
-        width: 150px;
-        height: 180px;
+        width: 100px;
+        height: 130px;
         background-size: 200px;
     }
     #a1, #a2 {
-        height: 80px;
-        width: 135px;
+        font-size: 1.1em;
+        height: 65px;
+        width: 125px;
     }
     #p1 {
         height: 600px;
