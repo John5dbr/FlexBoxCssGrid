@@ -26,9 +26,10 @@ body {
        'pic1'
        'main'
        'footer';
-    margin-top: 480px;
+    margin-top: 470px;
 }
 header {
+    z-index: 5;
     top: 0px;
     display: grid;
     grid-area: header;
@@ -106,55 +107,336 @@ nav {
 main {
     justify-content: center;
     display: grid;
-    grid-template-columns: 20% 20% 28.5% 28.5%;
-    grid-template-rows: auto auto;
+    grid-template-columns: 16% 16% 31.5% 31.5%;
+    grid-template-rows: 50% 50%;
     grid-template-areas: 
        's1 s1 s2 s3'
        's1 s1 s4 s5';
     height: 80vh;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 #s1 {
-    background: #353535;
+    background: #ffffff;
     display: grid;
-    justify-content: center;
     grid-area: s1;
+    text-align: center;
+    border: 1px solid white;
+}
+#s1:hover {
+    border: 1px solid #EFA00B;
 }
 #s1 > picture {
-    background: url('imagens(1)/pexels-pok-rie-.jpg') no-repeat center;
-    background-size: contain;
-    width: 400px;
-    height: 400px;
+    justify-self: center;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
 }
-#s1 > img {
-    background: url('imagens(1)/pexels-dids-10064802.jpg') no-repeat center;
+#s1 > picture > .artF {
+    background: url('imagens(1)/download.jpg') no-repeat center;
     background-size: cover;
     width: 100%;
     height: 100%;
 }
-#s2 {
-    background: #353535;
+#s1 > picture:hover .artF {
+    filter: blur(0.5px);
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+#s1 > p {
+    margin: 0px 35px;
+    text-align: justify;
+}
+#s1 > article > a {
+    color: black;
+}
+#s1 > article {
+    justify-self: center;
+    background: #00A7E1;
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;
     display: grid;
-    justify-content: center;
+    align-items: center;
+}
+#s1 > article:hover {
+    background: var(--cor3);
+}
+#s1 > article:active {
+    background: rgba(154, 233, 35, 0.829);
+}
+#s2 {
+    background: #ffffff;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+       'pic div'
+       'pic div'
+       'pic div';
     grid-area: s2;
+    border: 1px solid white;
+}
+#s2:hover {
+    border: 1px solid #EFA00B;
+}
+#s2 > picture {
+    justify-self: center;
+    overflow: hidden;
+    height: 140px;
+    width: 140px;
+    grid-area: pic;
+    margin-left: 10px;
+}
+#s2 > picture > .artF {
+    background: url('imagens(1)/shopping.webp') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#s2 > picture:hover .artF {
+    filter: blur(0.5px);
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+}
+.container {
+    grid-area: div;
+    display: flex;
+    flex-flow: column;
+}
+.container > h2 {
+    margin: 20px 20px;
+    align-self: center
+}
+.container > p {
+    margin: 0px 20px;
+    text-align: justify;
+    align-self: center
+}
+.container > article > a {
+    color: black;
+}
+.container > article {
+    justify-self: center;
+    background: #00A7E1;
+    padding: 8px 5%;
+    align-self: center;
+    margin: 20px 0px 20px 20px;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+}
+.container > article:hover {
+    background: var(--cor3);
+}
+.container > article:active {
+    background: rgba(154, 233, 35, 0.829);
 }
 #s3 {
-    background: #353535;
+    background: #ffffff;
     display: grid;
-    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+       'pic div'
+       'pic div'
+       'pic div';
     grid-area: s3;
+    border: 1px solid white;
+}
+#s3:hover {
+    border: 1px solid #EFA00B;
+}
+#s3 > picture {
+    justify-self: center;
+    overflow: hidden;
+    height: 140px;
+    width: 140px;
+    grid-area: pic;
+    margin-left: 10px;
+}
+#s3 > picture > .artF {
+    background: url('imagens(1)/shopping\ \(1\).webp') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#s3 > picture:hover .artF {
+    filter: blur(0.5px);
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+}
+.container {
+    grid-area: div;
+    display: flex;
+    flex-flow: column;
+}
+.container > h2 {
+    margin: 20px 20px;
+    align-self: center
+}
+.container > p {
+    margin: 0px 20px;
+    text-align: justify;
+    align-self: center
+}
+.container > article > a {
+    color: black;
+}
+.container > article {
+    justify-self: center;
+    background: #00A7E1;
+    padding: 8px 5%;
+    align-self: center;
+    margin: 20px 0px 20px 20px;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+}
+.container > article:hover {
+    background: var(--cor3);
+}
+.container > article:active {
+    background: rgba(154, 233, 35, 0.829);
 }
 #s4 {
-    background: #353535;
+    background: #ffffff;
     display: grid;
-    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+       'pic div'
+       'pic div'
+       'pic div';
     grid-area: s4;
+    border: 1px solid white;
+}
+#s4:hover {
+    border: 1px solid #EFA00B;
+}
+#s4 > picture {
+    justify-self: center;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    grid-area: pic;
+    margin-left: 10px;
+}
+#s4 > picture > .artF {
+    background: url('imagens(1)/download.webp') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#s4 > picture:hover .artF {
+    filter: blur(0.5px);
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+}
+.container {
+    grid-area: div;
+    display: flex;
+    flex-flow: column;
+}
+.container > h2 {
+    margin: 20px 20px;
+    align-self: center
+}
+.container > p {
+    margin: 0px 20px;
+    text-align: justify;
+    align-self: center
+}
+.container > article > a {
+    color: black;
+}
+.container > article {
+    justify-self: center;
+    background: #00A7E1;
+    padding: 8px 5%;
+    align-self: center;
+    margin: 20px 0px 20px 20px;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+}
+.container > article:hover {
+    background: var(--cor3);
+}
+.container > article:active {
+    background: rgba(154, 233, 35, 0.829);
 }
 #s5 {
-    background: #353535;
+    background: #ffffff;
     display: grid;
-    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+       'pic div'
+       'pic div'
+       'pic div';
     grid-area: s5;
+    border: 1px solid white;
+}
+#s5:hover {
+    border: 1px solid #EFA00B;
+}
+#s5 > picture {
+    justify-self: center;
+    overflow: hidden;
+    height: 212px;
+    width: 150px;
+    grid-area: pic;
+    margin-left: 10px;
+}
+#s5 > picture > .artF {
+    background: url('imagens(1)/shopping\ \(2\).webp') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#s5 > picture:hover .artF {
+    filter: blur(0.5px);
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+}
+.container {
+    grid-area: div;
+    display: flex;
+    flex-flow: column;
+}
+.container > h2 {
+    margin: 20px 20px;
+    align-self: center
+}
+.container > p {
+    margin: 0px 20px;
+    text-align: justify;
+    align-self: center
+}
+.container > article > a {
+    color: black;
+}
+.container > article {
+    justify-self: center;
+    background: #00A7E1;
+    padding: 8px 5%;
+    align-self: center;
+    margin: 20px 0px 20px 20px;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+}
+.container > article:hover {
+    background: var(--cor3);
+}
+.container > article:active {
+    background: rgba(154, 233, 35, 0.829);
 }
 footer {
     display: grid;
