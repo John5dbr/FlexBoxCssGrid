@@ -26,28 +26,22 @@ body {
        'pic1'
        'main'
        'footer';
-    margin-top: 470px;
 }
 header {
     z-index: 5;
-    top: 0px;
     display: grid;
     grid-area: header;
-    position: fixed;
     justify-content: space-between;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     grid-template-areas: 
        'p1 nav';
     height: 15vh;
-    width: 100%;
-    background: #0f110c7c;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.473);
-    border-bottom: 2px solid #EFA00B;
+    margin-bottom: 390px;
 }
 header > picture {
-    width: 120px;
-    height: 95px;
+    width: 150px;
+    height: 125px;
     background: url('imagens(1)/image-removebg-preview.png') no-repeat center;
     background-size: cover;
     grid-area: p1;
@@ -69,7 +63,7 @@ nav {
     display: grid;
     color: white;
     align-items: center;
-    height: 14.5vh;
+    height: 10vh;
     width: 120px;
     grid-area: a1;
 }
@@ -84,7 +78,7 @@ nav {
     color: white;
     display: grid;
     align-items: center;
-    height: 14.5vh;
+    height: 10vh;
     width: 120px;
     grid-area: a2;
 }
@@ -115,7 +109,7 @@ main {
     height: 80vh;
     gap: 15px;
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 55px;
 }
 #s1 {
     background: #ffffff;
@@ -439,11 +433,86 @@ main {
     background: rgba(154, 233, 35, 0.829);
 }
 footer {
-    display: grid;
     grid-area: footer;
+    height: 30vh;
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+       'tits locais follow contact';
+    color: white;
+    background: linear-gradient(to bottom, var(--cor4), var(--cor5));
+    padding: 40px;
 }
-@media (max-width: 900px) {
+footer > h2 {
+    grid-area: tits;
+    font-size: 2em;
+    width: 25vw;
+}
+footer > article > p {
+    margin: 20px 0px;
+}
+article > p > em {
+    text-decoration: underline;
+}
+#locais {
+    grid-area: locais;
+}
+#follow {
+    grid-area: follow;
+}
+#contact {
+    grid-area: contact;
+} 
+@media (max-width: 1250px) {
     nav {
-        margin-right: 0px;
+        margin: 0px;
     }
+    main {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+           's1 s2'
+           's1 s3'
+           's4 s4'
+           's5 s5';
+        margin-bottom: 450px;
+    }
+    #s1 {
+        width: 50vw;
+    }
+    #s2 {
+        width: 42vw;
+    }
+    #s3 {
+        width: 42vw;
+    }
+    #s4 {
+        width: 90vw;
+        margin: auto;
+        justify-content: center;
+    }
+    #s5 {
+        justify-content: center;
+        width: 90vw;
+        margin: auto;
+    }
+    #s5 > picture { 
+    }
+    footer {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+           'tits locais'
+           'follow contact';
+        height: 430px;
+    }
+    footer > h2 {
+        font-size: 2.25em;
+    }
+}
+@media (max-width: 950px) {
+
 }
