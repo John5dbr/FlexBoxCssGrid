@@ -149,7 +149,7 @@ main {
     justify-self: center;
     background: #00A7E1;
     width: 30%;
-    height: 80%;
+    height: 6vh;
     border-radius: 10px;
     display: grid;
     align-items: center;
@@ -498,8 +498,7 @@ article > p > em {
         justify-content: center;
         width: 90vw;
         margin: auto;
-    }
-    #s5 > picture { 
+        padding: 5px;
     }
     footer {
         grid-template-columns: auto auto;
@@ -514,5 +513,116 @@ article > p > em {
     }
 }
 @media (max-width: 950px) {
-
+    main {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+           's1 s2'
+           's1 s3'
+           's4 s4'
+           's5 s5';
+        margin-bottom: 520px;
+    }
+}
+@media (max-width: 870px) {
+    main {
+        margin-bottom: 620px;
+    }
+}
+@media (max-width: 790px) {
+    main {
+        margin-bottom: 690px;
+    }
+}
+@media (max-width: 750px) {
+    main {
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+           's1 s1'
+           's2 s2'
+           's3 s3'
+           's4 s4'
+           's5 s5';
+        margin-bottom: 940px;
+    }
+    #s1 {
+        width: 90vw;
+        height: 500px;
+    }
+    #s2 {
+        width: 90vw;
+    }
+    #s3 {
+        width: 90vw;
+    }
+    #s4 {
+        width: 90vw;
+        margin: auto;
+        justify-content: center;
+    }
+    #s5 {
+        justify-content: center;
+        width: 90vw;
+        margin: auto;
+        padding: 5px;
+    }
+}
+@media (max-width: 650px) {
+    main {
+        margin-bottom: 970px;
+    }
+}
+@media (max-width: 500px) {
+    main {
+        margin-bottom: 1020px;
+    }
+    #s1 {
+        height: 500px;
+        margin: auto;
+    }
+    #s2 {
+        margin: auto;
+    }
+    #s3 {
+        margin: auto;
+    }
+    #s4 {
+        margin: auto;
+    }
+    #s5 {
+        margin: auto;
+    }
+    footer {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+           'tits'
+           'locais'
+           'follow'
+           'contact';
+        height: 126vh;
+    }
+    footer > h2 {
+        border-bottom: 1px solid white;
+        padding: 15px;
+        width: 70vw;
+    }
+    #locais {
+        border-bottom: 1px solid white;
+        padding: 15px;
+        width: 70vw;
+    }
+    #follow {
+        border-bottom: 1px solid white;
+        padding: 15px;
+        width: 70vw;
+    }
+    #contact {
+        border-bottom: 1px solid white;
+        padding: 15px;
+        width: 70vw;
+    }
+}
+@media (max-width: 450px) {
 }
