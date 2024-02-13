@@ -624,4 +624,14 @@ article > p > em {
     }
 }
 @media (max-width: 450px) {
+    #a1, #a2 {
+        height:  calc( 10vh - 4vh );
+        width: calc( 120px - 40px);
+    }    
+    main {
+        margin-bottom: 460px;
+    }
+    footer {
+        height: calc(116vh);
+    }
 }
