@@ -625,13 +625,13 @@ article > p > em {
 }
 @media (max-width: 450px) {
     #a1, #a2 {
-        height:  calc( 10vh - 4vh );
-        width: calc( 120px - 40px);
+        height:  calc( 10vh - 3vh );
+        width: calc( 120px - 20px);
     }    
     main {
         margin-bottom: 460px;
     }
     footer {
-        height: calc(116vh);
+        height: calc(116vh - 10vh);
     }
 }
