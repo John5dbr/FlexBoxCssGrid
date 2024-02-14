@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'hell';
+    src: url('font(1)/FreeSans.otf');
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+:root {
+    --cor1: #FFFFFF;
+    --cor2: #00A7E1;
+    --cor3: #EFA00B;
+    --cor4: #353535;
+    --cor5: #0F110C;
+}
+h1, h2, h3, p, a {
+    font-family: 'hell';
+    text-decoration: none;
+}

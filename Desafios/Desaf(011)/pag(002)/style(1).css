@@ -629,8 +629,8 @@ article > p > em {
         width: calc( 120px - 20px);
     }    
     header > picture {
-        width: 120px;
-        height: 95px;
+        width: 130px;
+        height: 105px;
     }
     header {
         margin-bottom: 460px;
