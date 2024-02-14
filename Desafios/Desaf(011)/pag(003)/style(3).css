@@ -2,12 +2,16 @@
     font-family: 'hell';
     src: url('font(1)/FreeSans.otf');
 }
+@font-face {
+    font-family: 'museo';
+    src: url('font(2)/Fonts/MuseoSans_500.otf');
+}
 * {
     margin: 0px;
     padding: 0px;
 }
 :root {
-    --cor1: #FFFFFF;
+    --cor1: #F4F4F4;
     --cor2: #00A7E1;
     --cor3: #EFA00B;
     --cor4: #353535;
@@ -16,4 +20,105 @@
 h1, h2, h3, p, a {
     font-family: 'hell';
     text-decoration: none;
+}
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+       'header'
+       'main'
+       'footer';
+    margin-top: 15.5vh;
+}
+header {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-area: header;
+    background: var(--cor1);
+    height: 15vh;
+    width: 100vw;
+    top: 0px;
+    position: fixed;
+    border-bottom: 3px solid var(--cor2);
+    box-shadow: 0px 2px 5px rgba(109, 109, 109, 0.315);
+}
+header > picture {  
+    margin-left: 3vh;
+    background: url('imagens(2)/image-removebg\(fav\)-preview.png') no-repeat left;
+    background-size: contain;
+    width: 47vw;
+    height: 13vh;
+    align-self: center;
+}
+header > nav {
+    width: 50vw;
+    display: grid;
+    justify-content: end;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+.a1 > a {
+    color: var(--cor5);
+}
+.a1 {
+    margin-right: 10vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+.a1:hover a {
+    color: #00A7E1;
+}
+main {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+       's1 s1'
+       's2 s3'
+       's2 s3';
+    grid-area: main;
+}
+#s1 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor1);
+    width: 100vw;
+    height: 50vh;
+    font-size: 48px;
+    background: linear-gradient(to right, #3e3e3f, #4D4D4F);
+    grid-area: s1;
+    margin-bottom: 8vh;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.534); 
+}
+#s2 {
+    color: #4D4D4F;
+    font-family: 'museo';
+    width: 50vw;
+    grid-area: s2;
+    display: grid;
+    margin-bottom: 5vh;
+}
+#s2 > p, h2 {
+    padding: 10px 60px;
+}
+#s3 {
+    grid-area: s3;
+    background: url('imagens(2)/');
+    width: 50vw;
+    margin-bottom: 8vh;
+}
+footer {
+    grid-area: footer;
+}
+@media (max-width: 900px) {
+    .a1 {
+        margin-right: 5vh;
+    }
 }
