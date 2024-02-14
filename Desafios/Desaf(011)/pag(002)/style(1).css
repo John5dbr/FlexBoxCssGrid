@@ -628,7 +628,7 @@ article > p > em {
         height:  calc( 10vh - 3vh );
         width: calc( 120px - 20px);
     }    
-    main {
+    header {
         margin-bottom: 460px;
     }
     footer {
