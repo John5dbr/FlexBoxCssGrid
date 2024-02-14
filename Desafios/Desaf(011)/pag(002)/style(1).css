@@ -628,8 +628,15 @@ article > p > em {
         height:  calc( 10vh - 3vh );
         width: calc( 120px - 20px);
     }    
+    header > picture {
+        width: 120px;
+        height: 95px;
+    }
     header {
         margin-bottom: 460px;
+    }
+    main {
+        margin-bottom: 1060px;
     }
     footer {
         height: calc(116vh - 10vh);
