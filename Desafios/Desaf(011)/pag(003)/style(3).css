@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: 'museo';
-    src: url('font(2)/Fonts/MuseoSans_500.otf');
+    src: url('font(3)/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf');
 }
 * {
     margin: 0px;
@@ -68,7 +68,6 @@ header > nav {
     display: grid;
     justify-content: center;
     align-items: center;
-    
 }
 .a1:hover a {
     color: #00A7E1;
@@ -77,19 +76,19 @@ main {
     display: grid;
     justify-content: space-between;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto ;
     grid-template-areas: 
        's1 s1'
        's2 s3'
-       's2 s3';
+       's4 s4';
     grid-area: main;
 }
 #s1 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.644);
     display: grid;
     justify-content: center;
     align-items: center;
     color: var(--cor1);
-    width: 100vw;
     height: 50vh;
     font-size: 48px;
     background: linear-gradient(to right, #3e3e3f, #4D4D4F);
@@ -99,23 +98,91 @@ main {
 }
 #s2 {
     color: #4D4D4F;
-    font-family: 'museo';
     width: 50vw;
     grid-area: s2;
     display: grid;
-    margin-bottom: 5vh;
+    margin: 7.5vh 0px;
 }
-#s2 > p, h2 {
-    padding: 10px 60px;
+#s2 > p, h1 {
+    padding: 10px 80px;
+    font-family: 'museo';
+}
+#s2 > h1 {
+    font-size: 36px;
+}
+#s2 > p {
+    font-size: 1.2em;
 }
 #s3 {
     grid-area: s3;
-    background: url('imagens(2)/');
-    width: 50vw;
-    margin-bottom: 8vh;
+    background: url('imagens(2)/pexels-kindel-media-9875420.jpg') no-repeat center;
+    background-size: cover;
+    width: 40vw;
+    margin: 7.5vh;
+    box-shadow: inset 0px 0px 5px rgba(26, 26, 26, 0.603);
+}
+#s4 {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-area: s4;
+    margin: 10vh 0px;
+}
+#s4 > section {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+#s4 > section:hover {
+    transform: scale(1.3);
+    transition-duration: 0.3s;
+    text-decoration: underline;
+}
+#img1 > a {
+    justify-self: center;
+    background: url('imagens(2)/2947981.png') center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+#img2 > a {
+    background: url('imagens(2)/images-removebg-preview.png') center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+#img3 > a {
+    background: url('imagens(2)/3722049.png') center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
 }
 footer {
+    display: grid;
     grid-area: footer;
+}
+#f1 {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    color: white;
+    background: #2C7B80;
+    height: 300px;
+}
+#f2 {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    color: white;
+    background: var(--cor4);
+    height: 250px;
 }
 @media (max-width: 900px) {
     .a1 {
