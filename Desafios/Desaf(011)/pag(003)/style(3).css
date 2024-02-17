@@ -196,7 +196,6 @@ footer {
     background: #4D4D4F;
     display: grid;
     align-items: start;
-    justify-content: space-evenly;
     width: 100%;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
@@ -204,9 +203,7 @@ footer {
        'picture n1'
        'picture n2';
     color: white;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    height: 250px;
+    height: 310px;
 }
 #f2 > nav > a {
     color: rgb(255, 255, 255);
@@ -214,18 +211,48 @@ footer {
 } 
 #f2 > picture {
     grid-area: picture;
-    height: 300px;
-    width: 300px;
-    background: url('imagens(2)/image-removebg-preview.png') no-repeat top;
-    background-size: 400px;
+    height: 95%;
+    width: 20vw;
+    background: url('imagens(2)/image-removebg-preview.png') no-repeat;
+    background-position: center top;
+    background-size: 350px 200px;
 }
 #n1 {
+    margin-left: 20px;
     grid-area: n1;
+    display: flex;
+    flex-flow: row wrap;
+    width: 70vw;
+    border-bottom: 2px solid white;
+    padding: 35px 0vw;
+} 
+.link1 > p:hover {
+    color: rgb(119, 138, 156);
+}
+.link2 > p:hover {
+    color: rgb(119, 138, 156);
+}
+.link1 {
+    flex: 30%;
+    padding: 25px 0vw;
+}
+.link2 {
+    flex: 30%;
 }
 #n2 {
+    justify-content: start;
+    display: flex;
+    flex-flow: row wrap;
+    width: 70vw;
     grid-area: n2;
 }
-@media (max-width: 900px) {
+#n2 > a {
+    padding: 0px 20px;
+}
+.TEXTOMERDA:hover {
+    color: rgb(119, 138, 156);
+}
+@media (max-width: 950px) {
     .a1 {
         margin-right: 5vh;
     }
