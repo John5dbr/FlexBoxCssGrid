@@ -30,8 +30,10 @@ body {
        'main'
        'footer';
     margin-top: 15.5vh;
+    overflow-x: hidden;
 }
 header {
+    z-index: 10;
     display: grid;
     justify-content: space-between;
     grid-template-columns: auto auto;
@@ -166,23 +168,62 @@ footer {
 }
 #f1 {
     display: grid;
-    align-items: center;
-    width: 100%;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 100vw;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     color: white;
     background: #2C7B80;
-    height: 300px;
+    height: 350px;
 }
+#f1 > h1 {
+    width: 40vw;
+    padding: 0px ;
+    margin-top: 5vw;
+}  
+#f1 > p {
+    width: 40vw;
+    padding: 0px ;
+    margin-top: 5vw;
+}
+#f1 > p > a {
+    color: rgb(75, 226, 201);
+    font-weight: bold;
+    text-decoration: underline;
+} 
 #f2 {
+    background: #4D4D4F;
     display: grid;
-    align-items: center;
+    align-items: start;
+    justify-content: space-evenly;
     width: 100%;
     grid-template-columns: auto auto;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+       'picture n1'
+       'picture n2';
     color: white;
-    background: var(--cor4);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     height: 250px;
+}
+#f2 > nav > a {
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Tahoma, sans-serif;
+} 
+#f2 > picture {
+    grid-area: picture;
+    height: 300px;
+    width: 300px;
+    background: url('imagens(2)/image-removebg-preview.png') no-repeat top;
+    background-size: 400px;
+}
+#n1 {
+    grid-area: n1;
+}
+#n2 {
+    grid-area: n2;
 }
 @media (max-width: 900px) {
     .a1 {
