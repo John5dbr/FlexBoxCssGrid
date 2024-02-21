@@ -30,7 +30,6 @@ body {
        'main'
        'footer';
     margin-top: 15.5vh;
-    overflow-x: hidden;
 }
 header {
     z-index: 10;
@@ -352,5 +351,30 @@ footer {
     }
     #s4 > section:hover {
         transform: scale(1.1);
+    }
+}
+@media (max-width: 450px) {
+    header {
+        width: 100vw;
+        height: calc(15vh - 25%);
+    }
+    header > picture {
+        height: calc(13vh - 25%);
+    }
+    main {
+        width: 100vw;
+    }
+    #f4 > section {
+        height: calc(150px - 25%);
+        width: calc(150px - 25%);
+    }
+    footer {
+        width: 100vw;
+    }
+    #f1 {
+        height: 375px;
+    }
+    #f2 {
+        height: 335px;
     }
 }
