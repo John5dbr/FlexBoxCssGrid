@@ -30,6 +30,7 @@ body {
        'main'
        'footer';
     margin-top: 15.5vh;
+    overflow-x: hidden;
 }
 header {
     z-index: 10;
@@ -91,6 +92,7 @@ main {
     align-items: center;
     color: var(--cor1);
     height: 50vh;
+    width: 100vw;
     font-size: 48px;
     background: linear-gradient(to right, #3e3e3f, #4D4D4F);
     grid-area: s1;
@@ -128,6 +130,7 @@ main {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
     grid-area: s4;
+    width: 100vw;
     margin: 10vh 0px;
 }
 #s4 > section {
@@ -162,6 +165,7 @@ main {
     height: 100px;
 }
 footer {
+    width: 100vw;
     display: grid;
     grid-area: footer;
 }
@@ -202,7 +206,7 @@ footer {
        'picture n1'
        'picture n2';
     color: white;
-    height: 310px;
+    height: 350px;
 }
 #f2 > nav > a {
     color: rgb(255, 255, 255);
@@ -293,7 +297,7 @@ footer {
            'picture'
            'n1'
            'n2';
-        height: 400px;
+        height: 450px;
     }
     #f2 > picture {
         width: 150px;
@@ -311,7 +315,7 @@ footer {
     }
     #n2 {
         margin: 15px 0px;
-        width: 100vw;
+        width: 95vw;
     }
     #n2 > a {
         margin: 2px;
@@ -351,30 +355,5 @@ footer {
     }
     #s4 > section:hover {
         transform: scale(1.1);
-    }
-}
-@media (max-width: 450px) {
-    header {
-        width: 100vw;
-        height: calc(15vh - 25%);
-    }
-    header > picture {
-        height: calc(13vh - 25%);
-    }
-    main {
-        width: 100vw;
-    }
-    #f4 > section {
-        height: calc(150px - 25%);
-        width: calc(150px - 25%);
-    }
-    footer {
-        width: 100vw;
-    }
-    #f1 {
-        height: 375px;
-    }
-    #f2 {
-        height: 335px;
     }
 }
